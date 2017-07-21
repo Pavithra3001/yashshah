@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5457061F-ED1E-482A-8815-CA334A508B38}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShabakahRedir</RootNamespace>
+    <AssemblyName>ShabakahRedir</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonMethods.cs" />
+    <Compile Include="LoggingEssentials.cs" />
+    <Compile Include="PanelServices.cs" />
+    <Compile Include="RedirSocketListener.cs" />
+    <Compile Include="MockRedir.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\TCServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoggerComponent\LoggerComponent.csproj">
+      <Project>{3a7d686f-de79-47d5-a474-1ed46799c396}</Project>
+      <Name>LoggerComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShabakahEntityManager\ShabakahEntityManager.csproj">
+      <Project>{d5998ea6-41db-40b8-99e8-9e3ccce8cc97}</Project>
+      <Name>ShabakahEntityManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.ArmSystemResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.DeleteRuleResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.DeleteSceneResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.DeleteScheduleResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.DeleteUserResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.DisarmSystemResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetAllAutomationDeviceStateResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetArmingModesResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetAuthorityLevelConfigurationResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetAutomationDeviceListResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetAutomationNetworkStatusResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetAvailableUserSlotsResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetCustomArmConfigResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetDeviceLevelResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetEntryDelaysResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetGeneralLockInfoResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetGeneralSwitchInfoResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetGeneralThermostatInfoResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetIndividualLockInfoResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetIndividualThermostatInfoResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetLockCurrentStateResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetNumberOfAutomationDeviceInStateResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetPanelLanguaageCapabilityResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetPanelSoftwareVersionResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetRuleConfigurationResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetRuleInformationResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetRuleNameResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetSceneConfigurationResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetSceneNameResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetSceneResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetScheduleConfigurationResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetScheduleInformationResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetSupportedChimesResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetSupportedZwaveFeaturesResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetSwitchCurrentStateResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetTemperatureScheduleResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetThermostatCurrentStateExResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetThermostatCurrentStateResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetUserAdminAuthorityLevelResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetUserBySlotResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetUserSlotRangeResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetZoneInformationResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetZoneListInStateWithConsoleInfoResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetZoneProgrammingCapabilityResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetZonesListInStateResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetZwaveConfigSequenceNumberResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.GetZWaveSwitchInfoResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.ImportZoneInfoResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.PanelFeatureSet2Result.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.PanelToCommitInfoResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.PartitionState.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.ReadConsoleDisplayResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.RenameLockResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.RenameSwitchResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.RenameThermostatResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.RunSceneResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SaveUserResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SetLockStateResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SetRuleNameResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SetRuleResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SetSceneNameResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SetSceneResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SetScheduleResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SetSwitchStateResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SetTemperatureScheduleResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SetThermostatStateResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SmartActionConfiguration.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SmartActionNameResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SmartActionResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SmartActionStateResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SynchronizePanelUserResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.SynchronizeSecurityPanelResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.TCServiceInstanceStatusResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.UserConfigurationSequenceNumberResult.datasource" />
+    <None Include="Properties\DataSources\ShabakahEntityManager.TCService.WebMethodResults.datasource" />
+    <None Include="Service References\TCServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\service.wsdl" />
+    <None Include="Service References\TCServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.ArmSystemResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.DeleteRuleResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.DeleteSceneResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.DeleteScheduleResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.DeleteUserResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.DisarmSystemResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetAllAutomationDeviceStateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetArmingModesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetAuthorityLevelConfigurationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetAutomationDeviceListResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetAutomationNetworkStatusResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetAvailableUserSlotsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetCustomArmConfigResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetDeviceLevelResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetEntryDelaysResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetGeneralLockInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetGeneralSwitchInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetGeneralThermostatInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetIndividualLockInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetIndividualThermostatInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetLockCurrentStateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetNumberOfAutomationDeviceInStateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetPanelLanguaageCapabilityResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetPanelSoftwareVersionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetRuleConfigurationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetRuleInformationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetRuleNameResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetSceneConfigurationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetSceneNameResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetSceneResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetScheduleConfigurationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetScheduleInformationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetSupportedChimesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetSupportedZwaveFeaturesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetSwitchCurrentStateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetTemperatureScheduleResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetThermostatCurrentStateExResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetThermostatCurrentStateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetUserAdminAuthorityLevelResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetUserBySlotResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetUserSlotRangeResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetZoneInformationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetZoneListInStateWithConsoleInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetZoneProgrammingCapabilityResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetZonesListInStateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetZwaveConfigSequenceNumberResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.GetZWaveSwitchInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.ImportZoneInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.PanelFeatureSet2Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.PanelToCommitInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.PartitionState.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.ReadConsoleDisplayResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.RenameLockResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.RenameSwitchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.RenameThermostatResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.RunSceneResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SaveUserResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SetLockStateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SetRuleNameResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SetRuleResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SetSceneNameResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SetSceneResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SetScheduleResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SetSwitchStateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SetTemperatureScheduleResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SetThermostatStateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SmartActionConfiguration.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SmartActionNameResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SmartActionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SmartActionStateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SynchronizePanelUserResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.SynchronizeSecurityPanelResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.TCServiceInstanceStatusResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.UserConfigurationSequenceNumberResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\ShabakahRedir.TCServiceReference.WebMethodResults.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCServiceReference\System.Collections.Generic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\TCService.SharedDomain.SmartAction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\tcServiceDomain.General.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\tcServiceDomain.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\tcWeb.TC.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\tcWeb.TC.Implementation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\tcWeb.WebMethodResultsData.General.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\tcWeb.WebMethodResultsData.SmartAction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\tcWeb.WebMethodResultsData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCServiceReference\tcWeb.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\TCServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TCServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TCServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TCServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

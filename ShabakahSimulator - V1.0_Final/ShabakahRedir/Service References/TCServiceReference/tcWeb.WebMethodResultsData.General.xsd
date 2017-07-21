@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcServiceDomain.General" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" />
+  <xs:complexType name="GetDeviceLevelResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" base="q1:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DeviceLevels" nillable="true" type="q2:ArrayOfKeyValueOfintDeviceLevel5y77eoN2" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDeviceLevelResult" nillable="true" type="tns:GetDeviceLevelResult" />
+  <xs:complexType name="GetZoneProgrammingCapabilityResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" base="q3:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/tcServiceDomain.General" minOccurs="0" name="ZoneProgrammingCapability" nillable="true" type="q4:ZoneProgrammingCapability" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetZoneProgrammingCapabilityResult" nillable="true" type="tns:GetZoneProgrammingCapabilityResult" />
+  <xs:complexType name="GetEntryDelaysResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" base="q5:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EntryDelay1" type="xs:int" />
+          <xs:element minOccurs="0" name="EntryDelay2" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetEntryDelaysResult" nillable="true" type="tns:GetEntryDelaysResult" />
+  <xs:complexType name="GetPanelSoftwareVersionResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" base="q6:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SoftwareVersion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPanelSoftwareVersionResult" nillable="true" type="tns:GetPanelSoftwareVersionResult" />
+  <xs:complexType name="GetCustomArmConfigResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" base="q7:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" minOccurs="0" name="ArmMode" type="q8:eArmMode" />
+          <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ByPassZones" nillable="true" type="q9:ArrayOfint" />
+          <xs:element minOccurs="0" name="EntryDelay" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetCustomArmConfigResult" nillable="true" type="tns:GetCustomArmConfigResult" />
+  <xs:complexType name="GetSupportedChimesResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" base="q10:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SupportedChimes" nillable="true" type="q11:ArrayOfint" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSupportedChimesResult" nillable="true" type="tns:GetSupportedChimesResult" />
+</xs:schema>

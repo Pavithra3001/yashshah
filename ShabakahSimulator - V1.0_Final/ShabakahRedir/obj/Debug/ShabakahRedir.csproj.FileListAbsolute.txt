@@ -1,0 +1,20 @@
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahRedir\bin\Debug\ShabakahRedir.dll.config
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahRedir\bin\Debug\ShabakahRedir.dll
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahRedir\bin\Debug\ShabakahRedir.pdb
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahRedir\bin\Debug\LoggerComponent.dll
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahRedir\bin\Debug\ShabakahEntityManager.dll
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahRedir\bin\Debug\LoggerComponent.pdb
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahRedir\bin\Debug\ShabakahEntityManager.pdb
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahRedir\obj\Debug\ShabakahRedir.csprojResolveAssemblyReference.cache
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahRedir\obj\Debug\ShabakahRedir.dll
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahRedir\obj\Debug\ShabakahRedir.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahRedir\bin\Debug\ShabakahRedir.dll.config
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahRedir\bin\Debug\ShabakahRedir.dll
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahRedir\bin\Debug\ShabakahRedir.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahRedir\bin\Debug\LoggerComponent.dll
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahRedir\bin\Debug\ShabakahEntityManager.dll
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahRedir\bin\Debug\LoggerComponent.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahRedir\bin\Debug\ShabakahEntityManager.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahRedir\obj\Debug\ShabakahRedir.csprojResolveAssemblyReference.cache
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahRedir\obj\Debug\ShabakahRedir.dll
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahRedir\obj\Debug\ShabakahRedir.pdb

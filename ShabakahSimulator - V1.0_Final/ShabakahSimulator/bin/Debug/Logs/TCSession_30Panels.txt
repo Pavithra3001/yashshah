@@ -1,0 +1,328 @@
+Search "00D02D3ba500" (698 hits in 1 file)
+  C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\bin\Debug\Logs\ShabakahSimulatorLog1.txt (698 hits)
+	Line 7508: TRACE : 16_2_2016_11_18_1 : [00D02D3ba500]PanelServices - OpenSession - Start
+	Line 7509: TRACE : 16_2_2016_11_18_1 : [00D02D3ba500]PanelServices - OpenSession - Sending
+	Line 7515: TRACE : 16_2_2016_11_18_2 : [00D02D3ba500]PanelServices - OpenSession - Success
+	Line 7516: TRACE : 16_2_2016_11_18_2 : [00D02D3ba500]PanelServices - OpenSession - End
+	Line 7652: TRACE : 16_2_2016_11_18_47 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 7653: TRACE : 16_2_2016_11_18_47 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 7654: TRACE : 16_2_2016_11_18_48 : [00D02D3ba500]PanelServices - SendArmRequest - FailedTC Service Session Initiated. Retry the Operation after few seconds
+	Line 7655: TRACE : 16_2_2016_11_18_48 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 7674: TRACE : 16_2_2016_11_18_54 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 7675: TRACE : 16_2_2016_11_18_54 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 7696: TRACE : 16_2_2016_11_18_59 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailTC Service Session Initiated. Retry the Operation after few seconds
+	Line 7697: TRACE : 16_2_2016_11_18_59 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 7720: TRACE : 16_2_2016_11_19_5 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 7721: TRACE : 16_2_2016_11_19_5 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 7750: TRACE : 16_2_2016_11_19_16 : [00D02D3ba500]PanelServices - SendArmRequest - FailedTC Service Session Initiated. Retry the Operation after few seconds
+	Line 7751: TRACE : 16_2_2016_11_19_16 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 7770: TRACE : 16_2_2016_11_19_22 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 7771: TRACE : 16_2_2016_11_19_22 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 7860: TRACE : 16_2_2016_11_20_45 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 7861: TRACE : 16_2_2016_11_20_45 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 7883: TRACE : 16_2_2016_11_20_51 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 7884: TRACE : 16_2_2016_11_20_51 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 7949: TRACE : 16_2_2016_11_21_16 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 7950: TRACE : 16_2_2016_11_21_16 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 7997: TRACE : 16_2_2016_11_21_22 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 7998: TRACE : 16_2_2016_11_21_22 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 8003: TRACE : 16_2_2016_11_21_22 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 8004: TRACE : 16_2_2016_11_21_22 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 8064: TRACE : 16_2_2016_11_21_28 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 8065: TRACE : 16_2_2016_11_21_28 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 8070: TRACE : 16_2_2016_11_21_29 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 8071: TRACE : 16_2_2016_11_21_29 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 8134: TRACE : 16_2_2016_11_21_35 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 8135: TRACE : 16_2_2016_11_21_35 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 8140: TRACE : 16_2_2016_11_21_35 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 8141: TRACE : 16_2_2016_11_21_35 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 8203: TRACE : 16_2_2016_11_21_41 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 8204: TRACE : 16_2_2016_11_21_41 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 8209: TRACE : 16_2_2016_11_21_42 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 8210: TRACE : 16_2_2016_11_21_42 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 8273: TRACE : 16_2_2016_11_21_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 8274: TRACE : 16_2_2016_11_21_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 8277: TRACE : 16_2_2016_11_21_49 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 8278: TRACE : 16_2_2016_11_21_49 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 8367: TRACE : 16_2_2016_11_21_55 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 8368: TRACE : 16_2_2016_11_21_55 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 8375: TRACE : 16_2_2016_11_21_55 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 8376: TRACE : 16_2_2016_11_21_55 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 8477: TRACE : 16_2_2016_11_22_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 8478: TRACE : 16_2_2016_11_22_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 8499: TRACE : 16_2_2016_11_22_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 8500: TRACE : 16_2_2016_11_22_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 8598: TRACE : 16_2_2016_11_22_9 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 8599: TRACE : 16_2_2016_11_22_9 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 8620: TRACE : 16_2_2016_11_22_10 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 8621: TRACE : 16_2_2016_11_22_10 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 8716: TRACE : 16_2_2016_11_22_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 8717: TRACE : 16_2_2016_11_22_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 8742: TRACE : 16_2_2016_11_22_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 8743: TRACE : 16_2_2016_11_22_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 8838: TRACE : 16_2_2016_11_22_24 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 8839: TRACE : 16_2_2016_11_22_24 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 8860: TRACE : 16_2_2016_11_22_25 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 8861: TRACE : 16_2_2016_11_22_25 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 8956: TRACE : 16_2_2016_11_22_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 8957: TRACE : 16_2_2016_11_22_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 8982: TRACE : 16_2_2016_11_22_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 8983: TRACE : 16_2_2016_11_22_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 9076: TRACE : 16_2_2016_11_22_39 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 9077: TRACE : 16_2_2016_11_22_39 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 9102: TRACE : 16_2_2016_11_22_40 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 9103: TRACE : 16_2_2016_11_22_40 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 9198: TRACE : 16_2_2016_11_22_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 9199: TRACE : 16_2_2016_11_22_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 9220: TRACE : 16_2_2016_11_22_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 9221: TRACE : 16_2_2016_11_22_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 9316: TRACE : 16_2_2016_11_22_54 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 9317: TRACE : 16_2_2016_11_22_54 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 9338: TRACE : 16_2_2016_11_22_55 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 9339: TRACE : 16_2_2016_11_22_55 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 9438: TRACE : 16_2_2016_11_23_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 9439: TRACE : 16_2_2016_11_23_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 9460: TRACE : 16_2_2016_11_23_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 9461: TRACE : 16_2_2016_11_23_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 9558: TRACE : 16_2_2016_11_23_9 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 9559: TRACE : 16_2_2016_11_23_9 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 9580: TRACE : 16_2_2016_11_23_10 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 9581: TRACE : 16_2_2016_11_23_10 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 9678: TRACE : 16_2_2016_11_23_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 9679: TRACE : 16_2_2016_11_23_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 9702: TRACE : 16_2_2016_11_23_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 9703: TRACE : 16_2_2016_11_23_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 9796: TRACE : 16_2_2016_11_23_24 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 9797: TRACE : 16_2_2016_11_23_24 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 9820: TRACE : 16_2_2016_11_23_25 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 9821: TRACE : 16_2_2016_11_23_25 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 9918: TRACE : 16_2_2016_11_23_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 9919: TRACE : 16_2_2016_11_23_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 9942: TRACE : 16_2_2016_11_23_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 9943: TRACE : 16_2_2016_11_23_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 10038: TRACE : 16_2_2016_11_23_39 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 10039: TRACE : 16_2_2016_11_23_39 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 10060: TRACE : 16_2_2016_11_23_40 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 10061: TRACE : 16_2_2016_11_23_40 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 10158: TRACE : 16_2_2016_11_23_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 10159: TRACE : 16_2_2016_11_23_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 10180: TRACE : 16_2_2016_11_23_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 10181: TRACE : 16_2_2016_11_23_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 10276: TRACE : 16_2_2016_11_23_54 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 10277: TRACE : 16_2_2016_11_23_54 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 10302: TRACE : 16_2_2016_11_23_55 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 10303: TRACE : 16_2_2016_11_23_55 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 10398: TRACE : 16_2_2016_11_24_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 10399: TRACE : 16_2_2016_11_24_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 10422: TRACE : 16_2_2016_11_24_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 10423: TRACE : 16_2_2016_11_24_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 10516: TRACE : 16_2_2016_11_24_9 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 10517: TRACE : 16_2_2016_11_24_9 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 10542: TRACE : 16_2_2016_11_24_10 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 10543: TRACE : 16_2_2016_11_24_10 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 10638: TRACE : 16_2_2016_11_24_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 10639: TRACE : 16_2_2016_11_24_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 10660: TRACE : 16_2_2016_11_24_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 10661: TRACE : 16_2_2016_11_24_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 10756: TRACE : 16_2_2016_11_24_24 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 10757: TRACE : 16_2_2016_11_24_24 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 10782: TRACE : 16_2_2016_11_24_25 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 10783: TRACE : 16_2_2016_11_24_25 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 10878: TRACE : 16_2_2016_11_24_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 10879: TRACE : 16_2_2016_11_24_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 10900: TRACE : 16_2_2016_11_24_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 10901: TRACE : 16_2_2016_11_24_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 10998: TRACE : 16_2_2016_11_24_39 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 10999: TRACE : 16_2_2016_11_24_39 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 11020: TRACE : 16_2_2016_11_24_40 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 11021: TRACE : 16_2_2016_11_24_40 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 11118: TRACE : 16_2_2016_11_24_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 11119: TRACE : 16_2_2016_11_24_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 11140: TRACE : 16_2_2016_11_24_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 11141: TRACE : 16_2_2016_11_24_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 11238: TRACE : 16_2_2016_11_24_54 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 11239: TRACE : 16_2_2016_11_24_54 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 11260: TRACE : 16_2_2016_11_24_55 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 11261: TRACE : 16_2_2016_11_24_55 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 11358: TRACE : 16_2_2016_11_25_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 11359: TRACE : 16_2_2016_11_25_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 11380: TRACE : 16_2_2016_11_25_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 11381: TRACE : 16_2_2016_11_25_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 11478: TRACE : 16_2_2016_11_25_9 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 11479: TRACE : 16_2_2016_11_25_9 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 11500: TRACE : 16_2_2016_11_25_10 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 11501: TRACE : 16_2_2016_11_25_10 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 11598: TRACE : 16_2_2016_11_25_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 11599: TRACE : 16_2_2016_11_25_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 11620: TRACE : 16_2_2016_11_25_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 11621: TRACE : 16_2_2016_11_25_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 11718: TRACE : 16_2_2016_11_25_24 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 11719: TRACE : 16_2_2016_11_25_24 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 11746: TRACE : 16_2_2016_11_25_26 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 11747: TRACE : 16_2_2016_11_25_26 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 11842: TRACE : 16_2_2016_11_25_32 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 11843: TRACE : 16_2_2016_11_25_32 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 11858: TRACE : 16_2_2016_11_25_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 11859: TRACE : 16_2_2016_11_25_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 11958: TRACE : 16_2_2016_11_25_39 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 11959: TRACE : 16_2_2016_11_25_39 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 11980: TRACE : 16_2_2016_11_25_40 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 11981: TRACE : 16_2_2016_11_25_40 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 12076: TRACE : 16_2_2016_11_25_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 12077: TRACE : 16_2_2016_11_25_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 12102: TRACE : 16_2_2016_11_25_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 12103: TRACE : 16_2_2016_11_25_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 12196: TRACE : 16_2_2016_11_25_54 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 12197: TRACE : 16_2_2016_11_25_54 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 12220: TRACE : 16_2_2016_11_25_55 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 12221: TRACE : 16_2_2016_11_25_55 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 12316: TRACE : 16_2_2016_11_26_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 12317: TRACE : 16_2_2016_11_26_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 12340: TRACE : 16_2_2016_11_26_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 12341: TRACE : 16_2_2016_11_26_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 12438: TRACE : 16_2_2016_11_26_9 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 12439: TRACE : 16_2_2016_11_26_9 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 12462: TRACE : 16_2_2016_11_26_10 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 12463: TRACE : 16_2_2016_11_26_10 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 12558: TRACE : 16_2_2016_11_26_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 12559: TRACE : 16_2_2016_11_26_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 12580: TRACE : 16_2_2016_11_26_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 12581: TRACE : 16_2_2016_11_26_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 12678: TRACE : 16_2_2016_11_26_24 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 12679: TRACE : 16_2_2016_11_26_24 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 12700: TRACE : 16_2_2016_11_26_25 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 12701: TRACE : 16_2_2016_11_26_25 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 12798: TRACE : 16_2_2016_11_26_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 12799: TRACE : 16_2_2016_11_26_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 12820: TRACE : 16_2_2016_11_26_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 12821: TRACE : 16_2_2016_11_26_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 12916: TRACE : 16_2_2016_11_26_39 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 12917: TRACE : 16_2_2016_11_26_39 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 12942: TRACE : 16_2_2016_11_26_40 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 12943: TRACE : 16_2_2016_11_26_40 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 13038: TRACE : 16_2_2016_11_26_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 13039: TRACE : 16_2_2016_11_26_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 13060: TRACE : 16_2_2016_11_26_47 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 13061: TRACE : 16_2_2016_11_26_47 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 13158: TRACE : 16_2_2016_11_26_53 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 13159: TRACE : 16_2_2016_11_26_53 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 13180: TRACE : 16_2_2016_11_26_55 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 13181: TRACE : 16_2_2016_11_26_55 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 13278: TRACE : 16_2_2016_11_27_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 13279: TRACE : 16_2_2016_11_27_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 13300: TRACE : 16_2_2016_11_27_2 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 13301: TRACE : 16_2_2016_11_27_2 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 13396: TRACE : 16_2_2016_11_27_8 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 13397: TRACE : 16_2_2016_11_27_8 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 13422: TRACE : 16_2_2016_11_27_10 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 13423: TRACE : 16_2_2016_11_27_10 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 13518: TRACE : 16_2_2016_11_27_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 13519: TRACE : 16_2_2016_11_27_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 13542: TRACE : 16_2_2016_11_27_17 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 13543: TRACE : 16_2_2016_11_27_17 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 13634: TRACE : 16_2_2016_11_27_23 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 13635: TRACE : 16_2_2016_11_27_23 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 13664: TRACE : 16_2_2016_11_27_25 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 13665: TRACE : 16_2_2016_11_27_25 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 13754: TRACE : 16_2_2016_11_27_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 13755: TRACE : 16_2_2016_11_27_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 13782: TRACE : 16_2_2016_11_27_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 13783: TRACE : 16_2_2016_11_27_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 13876: TRACE : 16_2_2016_11_27_39 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 13877: TRACE : 16_2_2016_11_27_39 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 13902: TRACE : 16_2_2016_11_27_40 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 13903: TRACE : 16_2_2016_11_27_40 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 13988: TRACE : 16_2_2016_11_27_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 13989: TRACE : 16_2_2016_11_27_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 14006: TRACE : 16_2_2016_11_27_47 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 14007: TRACE : 16_2_2016_11_27_47 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 14100: TRACE : 16_2_2016_11_27_53 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 14101: TRACE : 16_2_2016_11_27_53 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 14124: TRACE : 16_2_2016_11_27_55 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 14125: TRACE : 16_2_2016_11_27_55 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 14222: TRACE : 16_2_2016_11_28_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 14223: TRACE : 16_2_2016_11_28_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 14244: TRACE : 16_2_2016_11_28_2 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 14245: TRACE : 16_2_2016_11_28_2 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 14342: TRACE : 16_2_2016_11_28_8 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 14343: TRACE : 16_2_2016_11_28_8 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 14364: TRACE : 16_2_2016_11_28_10 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 14365: TRACE : 16_2_2016_11_28_10 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 14460: TRACE : 16_2_2016_11_28_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 14461: TRACE : 16_2_2016_11_28_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 14486: TRACE : 16_2_2016_11_28_17 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 14487: TRACE : 16_2_2016_11_28_17 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 14582: TRACE : 16_2_2016_11_28_23 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 14583: TRACE : 16_2_2016_11_28_23 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 14604: TRACE : 16_2_2016_11_28_25 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 14605: TRACE : 16_2_2016_11_28_25 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 14700: TRACE : 16_2_2016_11_28_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 14701: TRACE : 16_2_2016_11_28_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 14726: TRACE : 16_2_2016_11_28_32 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 14727: TRACE : 16_2_2016_11_28_32 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 14820: TRACE : 16_2_2016_11_28_38 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 14821: TRACE : 16_2_2016_11_28_38 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 14842: TRACE : 16_2_2016_11_28_40 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 14843: TRACE : 16_2_2016_11_28_40 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 14940: TRACE : 16_2_2016_11_28_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 14941: TRACE : 16_2_2016_11_28_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 14966: TRACE : 16_2_2016_11_28_47 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 14967: TRACE : 16_2_2016_11_28_47 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 15060: TRACE : 16_2_2016_11_28_53 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 15061: TRACE : 16_2_2016_11_28_53 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 15086: TRACE : 16_2_2016_11_28_55 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 15087: TRACE : 16_2_2016_11_28_55 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 15180: TRACE : 16_2_2016_11_29_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 15181: TRACE : 16_2_2016_11_29_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 15206: TRACE : 16_2_2016_11_29_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 15207: TRACE : 16_2_2016_11_29_3 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 15300: TRACE : 16_2_2016_11_29_9 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 15301: TRACE : 16_2_2016_11_29_9 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 15326: TRACE : 16_2_2016_11_29_10 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 15327: TRACE : 16_2_2016_11_29_10 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 15422: TRACE : 16_2_2016_11_29_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 15423: TRACE : 16_2_2016_11_29_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 15444: TRACE : 16_2_2016_11_29_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 15445: TRACE : 16_2_2016_11_29_18 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 15542: TRACE : 16_2_2016_11_29_24 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 15543: TRACE : 16_2_2016_11_29_24 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 15564: TRACE : 16_2_2016_11_29_25 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 15565: TRACE : 16_2_2016_11_29_25 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 15662: TRACE : 16_2_2016_11_29_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 15663: TRACE : 16_2_2016_11_29_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 15684: TRACE : 16_2_2016_11_29_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 15685: TRACE : 16_2_2016_11_29_33 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 15780: TRACE : 16_2_2016_11_29_39 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 15781: TRACE : 16_2_2016_11_29_39 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 15804: TRACE : 16_2_2016_11_29_40 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 15805: TRACE : 16_2_2016_11_29_40 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 15900: TRACE : 16_2_2016_11_29_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 15901: TRACE : 16_2_2016_11_29_46 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 15924: TRACE : 16_2_2016_11_29_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 15925: TRACE : 16_2_2016_11_29_48 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 16022: TRACE : 16_2_2016_11_29_54 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 16023: TRACE : 16_2_2016_11_29_54 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 16048: TRACE : 16_2_2016_11_29_55 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 16049: TRACE : 16_2_2016_11_29_55 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 16142: TRACE : 16_2_2016_11_30_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 16143: TRACE : 16_2_2016_11_30_1 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 16160: TRACE : 16_2_2016_11_30_2 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 16161: TRACE : 16_2_2016_11_30_2 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 16258: TRACE : 16_2_2016_11_30_8 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 16259: TRACE : 16_2_2016_11_30_8 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 16280: TRACE : 16_2_2016_11_30_10 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 16281: TRACE : 16_2_2016_11_30_10 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 16378: TRACE : 16_2_2016_11_30_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 16379: TRACE : 16_2_2016_11_30_16 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 16400: TRACE : 16_2_2016_11_30_17 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 16401: TRACE : 16_2_2016_11_30_17 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 16498: TRACE : 16_2_2016_11_30_23 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 16499: TRACE : 16_2_2016_11_30_23 : [00D02D3ba500]PanelServices - SendArmRequest - Sending
+	Line 16520: TRACE : 16_2_2016_11_30_25 : [00D02D3ba500]PanelServices - SendArmRequest - FailedSession ID is not valid
+	Line 16521: TRACE : 16_2_2016_11_30_25 : [00D02D3ba500]PanelServices - SendArmRequest - End
+	Line 16616: TRACE : 16_2_2016_11_30_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Start
+	Line 16617: TRACE : 16_2_2016_11_30_31 : [00D02D3ba500]PanelServices - SendDisArmRequest - Sending
+	Line 16642: TRACE : 16_2_2016_11_30_32 : [00D02D3ba500]PanelServices - SendDisArmRequest - FailSession ID is not valid
+	Line 16643: TRACE : 16_2_2016_11_30_32 : [00D02D3ba500]PanelServices - SendDisArmRequest - End
+	Line 16738: TRACE : 16_2_2016_11_30_38 : [00D02D3ba500]PanelServices - SendArmRequest - Start
+	Line 16739: TRACE : 16_2_2016_11_30_38 : [00D02D3ba500]PanelServices - SendArmRequest - Sending

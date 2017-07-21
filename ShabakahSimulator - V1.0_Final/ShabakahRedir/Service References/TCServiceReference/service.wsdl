@@ -1,0 +1,2177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TCService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/tcServiceDomain" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.SmartAction" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/TCService.SharedDomain.SmartAction" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.TC.Implementation" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/tcServiceDomain.General" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/tcWeb" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITCService_GetUserAdminAuthorityLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAdminAuthorityLevel" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetUserAdminAuthorityLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAdminAuthorityLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetUserConfigurationSequenceNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationSequenceNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetUserConfigurationSequenceNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationSequenceNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SynchronizePanelUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizePanelUser" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SynchronizePanelUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizePanelUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAvailableUserSlots_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableUserSlots" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAvailableUserSlots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableUserSlotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAPIVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAPIVersion" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAPIVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAPIVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSmartActionConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartActionConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSmartActionConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartActionConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_AddEditSmartAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEditSmartAction" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_AddEditSmartAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEditSmartActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSmartActionName_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSmartActionName" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSmartActionName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSmartActionNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSmartActionName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartActionName" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSmartActionName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartActionNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSmartActionState_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSmartActionState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSmartActionState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSmartActionStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSmartActionState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartActionState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSmartActionState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartActionStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DeleteSmartAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSmartAction" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DeleteSmartAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSmartActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ExecuteSmartAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteSmartAction" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ExecuteSmartAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteSmartActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSmartAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartAction" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSmartAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSmartActionEditingOnPanel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSmartActionEditingOnPanel" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSmartActionEditingOnPanel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSmartActionEditingOnPanelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_AddCloudDeviceToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCloudDeviceToken" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_AddCloudDeviceToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCloudDeviceTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_AuthorizeCloudDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizeCloudDevice" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_AuthorizeCloudDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizeCloudDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_RevokeCloudDeviceToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeCloudDeviceToken" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_RevokeCloudDeviceToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeCloudDeviceTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ChangeCloudDeviceUrl_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeCloudDeviceUrl" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ChangeCloudDeviceUrl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeCloudDeviceUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetBatteryLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBatteryLevel" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetBatteryLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBatteryLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetBatteryLevelByZoneRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBatteryLevelByZoneRange" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetBatteryLevelByZoneRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBatteryLevelByZoneRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSignalStrengthLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignalStrengthLevel" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSignalStrengthLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignalStrengthLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSignalStrengthLevelByZoneRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignalStrengthLevelByZoneRange" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSignalStrengthLevelByZoneRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignalStrengthLevelByZoneRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetZoneProgrammingCapability_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZoneProgrammingCapability" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetZoneProgrammingCapability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZoneProgrammingCapabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetEntryDelays_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntryDelays" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetEntryDelays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntryDelaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetPanelSoftwareVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPanelSoftwareVersion" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetPanelSoftwareVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPanelSoftwareVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetCustomArmConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomArmConfig" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetCustomArmConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomArmConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetCustomArmConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCustomArmConfig" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetCustomArmConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCustomArmConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ArmSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:ArmSystem" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ArmSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ArmSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DisarmSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisarmSystem" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DisarmSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisarmSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetZonesListInState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZonesListInState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetZonesListInState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZonesListInStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetZoneListInStateWithConsoleInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZoneListInStateWithConsoleInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetZoneListInStateWithConsoleInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZoneListInStateWithConsoleInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAreaStatusObject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaStatusObject" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAreaStatusObject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaStatusObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAreaStat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaStat" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAreaStat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaStatResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_Bypass_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bypass" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_Bypass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BypassResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_OpenSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:OpenSession" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_OpenSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OpenSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_IsConnected_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsConnected" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_IsConnected_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsConnectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetConnections_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConnections" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetConnections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConnectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetLogFileLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogFileLocation" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetLogFileLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogFileLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_Authenticate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_Authenticate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ReadConsoleDisplay_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadConsoleDisplay" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ReadConsoleDisplay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadConsoleDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_CloseSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseSession" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_CloseSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_PanelToCommitChanges_InputMessage">
+    <wsdl:part name="parameters" element="tns:PanelToCommitChanges" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_PanelToCommitChanges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PanelToCommitChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSupportedZwaveFeatures_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportedZwaveFeatures" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSupportedZwaveFeatures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportedZwaveFeaturesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetZwaveConfigSequenceNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZwaveConfigSequenceNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetZwaveConfigSequenceNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZwaveConfigSequenceNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetPanelLanguageConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPanelLanguageConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetPanelLanguageConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPanelLanguageConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetArmingModes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArmingModes" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetArmingModes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArmingModesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetNumberOfPartitions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfPartitions" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetNumberOfPartitions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfPartitionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetInstaller_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstaller" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetInstaller_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstallerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetHardwareName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHardwareName" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetHardwareName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHardwareNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSequenceNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSequenceNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSequenceNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSequenceNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetCommandInProgressToNone_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCommandInProgressToNone" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetCommandInProgressToNone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCommandInProgressToNoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetCommandInProgress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommandInProgress" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetCommandInProgress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommandInProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetNumberOfZones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfZones" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetNumberOfZones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfZonesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetHomeArea_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeArea" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetHomeArea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SendKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendKey" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SendKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SendMacro_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMacro" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SendMacro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMacroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ImportZoneInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportZoneInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ImportZoneInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportZoneInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetZoneUnicode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZoneUnicode" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetZoneUnicode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZoneUnicodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSupportedChimes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportedChimes" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSupportedChimes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportedChimesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetLastCommandState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastCommandState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetLastCommandState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastCommandStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SendPanic_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendPanic" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SendPanic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendPanicResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetPanelFeatureSet2Info_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPanelFeatureSet2Info" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetPanelFeatureSet2Info_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPanelFeatureSet2InfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetCurrentTCServiceInstanceStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentTCServiceInstanceStatus" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetCurrentTCServiceInstanceStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentTCServiceInstanceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_StartUpCurrentTCServiceInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartUpCurrentTCServiceInstance" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_StartUpCurrentTCServiceInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartUpCurrentTCServiceInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ShutDownCurrentTCServiceInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShutDownCurrentTCServiceInstance" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_ShutDownCurrentTCServiceInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShutDownCurrentTCServiceInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SynchronizeSecurityPanel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeSecurityPanel" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SynchronizeSecurityPanel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeSecurityPanelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAutomationNetworkStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomationNetworkStatus" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAutomationNetworkStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomationNetworkStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetNumberOfAutomationDevicesInState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfAutomationDevicesInState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetNumberOfAutomationDevicesInState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfAutomationDevicesInStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAutomationDevicesListInState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomationDevicesListInState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAutomationDevicesListInState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutomationDevicesListInStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAllAutomationDeviceState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAutomationDeviceState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAllAutomationDeviceState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAutomationDeviceStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetGeneralSwitchInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralSwitchInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetGeneralSwitchInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralSwitchInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetIndividualSwitchInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndividualSwitchInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetIndividualSwitchInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndividualSwitchInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSwitchCurrentState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSwitchCurrentState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSwitchCurrentState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSwitchCurrentStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSwitchState_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSwitchState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSwitchState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSwitchStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_RenameSwitch_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameSwitch" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_RenameSwitch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameSwitchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetGeneralLockInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralLockInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetGeneralLockInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralLockInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetIndividualLockInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndividualLockInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetIndividualLockInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndividualLockInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetLockCurrentState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockCurrentState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetLockCurrentState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockCurrentStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetLockState_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetLockState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetLockState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetLockStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_RenameLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameLock" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_RenameLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetGeneralThermostatInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralThermostatInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetGeneralThermostatInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralThermostatInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetIndividualThermostatInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndividualThermostatInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetIndividualThermostatInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndividualThermostatInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetThermostatCurrentState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetThermostatCurrentState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetThermostatCurrentState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetThermostatCurrentStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetThermostatCurrentStateEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetThermostatCurrentStateEx" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetThermostatCurrentStateEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetThermostatCurrentStateExResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetThermostatState_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetThermostatState" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetThermostatState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetThermostatStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_RenameThermostat_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameThermostat" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_RenameThermostat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameThermostatResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSceneConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSceneConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSceneConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSceneConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetScene_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetScene" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetScene_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSceneResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetScene_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScene" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetScene_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSceneResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_RunScene_InputMessage">
+    <wsdl:part name="parameters" element="tns:RunScene" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_RunScene_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RunSceneResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DeleteScene_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteScene" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DeleteScene_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSceneResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSceneName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSceneName" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetSceneName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSceneNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSceneName_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSceneName" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSceneName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSceneNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetRuleConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRuleConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetRuleConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRuleConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DeleteRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRule" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DeleteRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetRuleInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRuleInformation" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetRuleInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRuleInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRule" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetRuleName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRuleName" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetRuleName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRuleNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetRuleName_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRuleName" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetRuleName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRuleNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetScheduleConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetScheduleConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DeleteSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSchedule" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DeleteSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetScheduleInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleInformation" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetScheduleInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSchedule" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetTemperatureSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemperatureSchedule" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetTemperatureSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemperatureScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetTemperatureSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetTemperatureSchedule" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SetTemperatureSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetTemperatureScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetUserBySlotNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBySlotNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetUserBySlotNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBySlotNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SaveUserInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserInformation" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SaveUserInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SaveUserInformationEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserInformationEx" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_SaveUserInformationEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserInformationExResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DeleteUserBySlotNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserBySlotNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_DeleteUserBySlotNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserBySlotNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetUserSlotRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserSlotRange" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetUserSlotRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserSlotRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAuthorityLevelConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorityLevelConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ITCService_GetAuthorityLevelConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorityLevelConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITCService">
+    <wsdl:operation name="GetUserAdminAuthorityLevel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetUserAdminAuthorityLevel" message="tns:ITCService_GetUserAdminAuthorityLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetUserAdminAuthorityLevelResponse" message="tns:ITCService_GetUserAdminAuthorityLevel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfigurationSequenceNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetUserConfigurationSequenceNumber" message="tns:ITCService_GetUserConfigurationSequenceNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetUserConfigurationSequenceNumberResponse" message="tns:ITCService_GetUserConfigurationSequenceNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizePanelUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SynchronizePanelUser" message="tns:ITCService_SynchronizePanelUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SynchronizePanelUserResponse" message="tns:ITCService_SynchronizePanelUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableUserSlots">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetAvailableUserSlots" message="tns:ITCService_GetAvailableUserSlots_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetAvailableUserSlotsResponse" message="tns:ITCService_GetAvailableUserSlots_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAPIVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetAPIVersion" message="tns:ITCService_GetAPIVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetAPIVersionResponse" message="tns:ITCService_GetAPIVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartActionConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSmartActionConfiguration" message="tns:ITCService_GetSmartActionConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSmartActionConfigurationResponse" message="tns:ITCService_GetSmartActionConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEditSmartAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/AddEditSmartAction" message="tns:ITCService_AddEditSmartAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/AddEditSmartActionResponse" message="tns:ITCService_AddEditSmartAction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSmartActionName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetSmartActionName" message="tns:ITCService_SetSmartActionName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetSmartActionNameResponse" message="tns:ITCService_SetSmartActionName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartActionName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSmartActionName" message="tns:ITCService_GetSmartActionName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSmartActionNameResponse" message="tns:ITCService_GetSmartActionName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSmartActionState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetSmartActionState" message="tns:ITCService_SetSmartActionState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetSmartActionStateResponse" message="tns:ITCService_SetSmartActionState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartActionState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSmartActionState" message="tns:ITCService_GetSmartActionState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSmartActionStateResponse" message="tns:ITCService_GetSmartActionState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSmartAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/DeleteSmartAction" message="tns:ITCService_DeleteSmartAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/DeleteSmartActionResponse" message="tns:ITCService_DeleteSmartAction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSmartAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/ExecuteSmartAction" message="tns:ITCService_ExecuteSmartAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/ExecuteSmartActionResponse" message="tns:ITCService_ExecuteSmartAction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSmartAction" message="tns:ITCService_GetSmartAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSmartActionResponse" message="tns:ITCService_GetSmartAction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSmartActionEditingOnPanel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetSmartActionEditingOnPanel" message="tns:ITCService_SetSmartActionEditingOnPanel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetSmartActionEditingOnPanelResponse" message="tns:ITCService_SetSmartActionEditingOnPanel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCloudDeviceToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/AddCloudDeviceToken" message="tns:ITCService_AddCloudDeviceToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/AddCloudDeviceTokenResponse" message="tns:ITCService_AddCloudDeviceToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCloudDevice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/AuthorizeCloudDevice" message="tns:ITCService_AuthorizeCloudDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/AuthorizeCloudDeviceResponse" message="tns:ITCService_AuthorizeCloudDevice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RevokeCloudDeviceToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/RevokeCloudDeviceToken" message="tns:ITCService_RevokeCloudDeviceToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/RevokeCloudDeviceTokenResponse" message="tns:ITCService_RevokeCloudDeviceToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCloudDeviceUrl">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/ChangeCloudDeviceUrl" message="tns:ITCService_ChangeCloudDeviceUrl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/ChangeCloudDeviceUrlResponse" message="tns:ITCService_ChangeCloudDeviceUrl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBatteryLevel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetBatteryLevel" message="tns:ITCService_GetBatteryLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetBatteryLevelResponse" message="tns:ITCService_GetBatteryLevel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBatteryLevelByZoneRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetBatteryLevelByZoneRange" message="tns:ITCService_GetBatteryLevelByZoneRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetBatteryLevelByZoneRangeResponse" message="tns:ITCService_GetBatteryLevelByZoneRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSignalStrengthLevel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSignalStrengthLevel" message="tns:ITCService_GetSignalStrengthLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSignalStrengthLevelResponse" message="tns:ITCService_GetSignalStrengthLevel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSignalStrengthLevelByZoneRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSignalStrengthLevelByZoneRange" message="tns:ITCService_GetSignalStrengthLevelByZoneRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSignalStrengthLevelByZoneRangeResponse" message="tns:ITCService_GetSignalStrengthLevelByZoneRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZoneProgrammingCapability">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetZoneProgrammingCapability" message="tns:ITCService_GetZoneProgrammingCapability_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetZoneProgrammingCapabilityResponse" message="tns:ITCService_GetZoneProgrammingCapability_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryDelays">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetEntryDelays" message="tns:ITCService_GetEntryDelays_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetEntryDelaysResponse" message="tns:ITCService_GetEntryDelays_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPanelSoftwareVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetPanelSoftwareVersion" message="tns:ITCService_GetPanelSoftwareVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetPanelSoftwareVersionResponse" message="tns:ITCService_GetPanelSoftwareVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomArmConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetCustomArmConfig" message="tns:ITCService_GetCustomArmConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetCustomArmConfigResponse" message="tns:ITCService_GetCustomArmConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCustomArmConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetCustomArmConfig" message="tns:ITCService_SetCustomArmConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetCustomArmConfigResponse" message="tns:ITCService_SetCustomArmConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ArmSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/ArmSystem" message="tns:ITCService_ArmSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/ArmSystemResponse" message="tns:ITCService_ArmSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisarmSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/DisarmSystem" message="tns:ITCService_DisarmSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/DisarmSystemResponse" message="tns:ITCService_DisarmSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZonesListInState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetZonesListInState" message="tns:ITCService_GetZonesListInState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetZonesListInStateResponse" message="tns:ITCService_GetZonesListInState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZoneListInStateWithConsoleInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetZoneListInStateWithConsoleInfo" message="tns:ITCService_GetZoneListInStateWithConsoleInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetZoneListInStateWithConsoleInfoResponse" message="tns:ITCService_GetZoneListInStateWithConsoleInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaStatusObject">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetAreaStatusObject" message="tns:ITCService_GetAreaStatusObject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetAreaStatusObjectResponse" message="tns:ITCService_GetAreaStatusObject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaStat">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetAreaStat" message="tns:ITCService_GetAreaStat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetAreaStatResponse" message="tns:ITCService_GetAreaStat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bypass">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/Bypass" message="tns:ITCService_Bypass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/BypassResponse" message="tns:ITCService_Bypass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OpenSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/OpenSession" message="tns:ITCService_OpenSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/OpenSessionResponse" message="tns:ITCService_OpenSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsConnected">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/IsConnected" message="tns:ITCService_IsConnected_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/IsConnectedResponse" message="tns:ITCService_IsConnected_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConnections">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetConnections" message="tns:ITCService_GetConnections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetConnectionsResponse" message="tns:ITCService_GetConnections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogFileLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetLogFileLocation" message="tns:ITCService_GetLogFileLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetLogFileLocationResponse" message="tns:ITCService_GetLogFileLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/Authenticate" message="tns:ITCService_Authenticate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/AuthenticateResponse" message="tns:ITCService_Authenticate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadConsoleDisplay">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/ReadConsoleDisplay" message="tns:ITCService_ReadConsoleDisplay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/ReadConsoleDisplayResponse" message="tns:ITCService_ReadConsoleDisplay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/CloseSession" message="tns:ITCService_CloseSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/CloseSessionResponse" message="tns:ITCService_CloseSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PanelToCommitChanges">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/PanelToCommitChanges" message="tns:ITCService_PanelToCommitChanges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/PanelToCommitChangesResponse" message="tns:ITCService_PanelToCommitChanges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportedZwaveFeatures">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSupportedZwaveFeatures" message="tns:ITCService_GetSupportedZwaveFeatures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSupportedZwaveFeaturesResponse" message="tns:ITCService_GetSupportedZwaveFeatures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZwaveConfigSequenceNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetZwaveConfigSequenceNumber" message="tns:ITCService_GetZwaveConfigSequenceNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetZwaveConfigSequenceNumberResponse" message="tns:ITCService_GetZwaveConfigSequenceNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPanelLanguageConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetPanelLanguageConfiguration" message="tns:ITCService_GetPanelLanguageConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetPanelLanguageConfigurationResponse" message="tns:ITCService_GetPanelLanguageConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArmingModes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetArmingModes" message="tns:ITCService_GetArmingModes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetArmingModesResponse" message="tns:ITCService_GetArmingModes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfPartitions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetNumberOfPartitions" message="tns:ITCService_GetNumberOfPartitions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetNumberOfPartitionsResponse" message="tns:ITCService_GetNumberOfPartitions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstaller">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetInstaller" message="tns:ITCService_GetInstaller_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetInstallerResponse" message="tns:ITCService_GetInstaller_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHardwareName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetHardwareName" message="tns:ITCService_GetHardwareName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetHardwareNameResponse" message="tns:ITCService_GetHardwareName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetVersion" message="tns:ITCService_GetVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetVersionResponse" message="tns:ITCService_GetVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSequenceNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSequenceNumber" message="tns:ITCService_GetSequenceNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSequenceNumberResponse" message="tns:ITCService_GetSequenceNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCommandInProgressToNone">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetCommandInProgressToNone" message="tns:ITCService_SetCommandInProgressToNone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetCommandInProgressToNoneResponse" message="tns:ITCService_SetCommandInProgressToNone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommandInProgress">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetCommandInProgress" message="tns:ITCService_GetCommandInProgress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetCommandInProgressResponse" message="tns:ITCService_GetCommandInProgress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfZones">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetNumberOfZones" message="tns:ITCService_GetNumberOfZones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetNumberOfZonesResponse" message="tns:ITCService_GetNumberOfZones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeArea">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetHomeArea" message="tns:ITCService_GetHomeArea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetHomeAreaResponse" message="tns:ITCService_GetHomeArea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SendKey" message="tns:ITCService_SendKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SendKeyResponse" message="tns:ITCService_SendKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMacro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SendMacro" message="tns:ITCService_SendMacro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SendMacroResponse" message="tns:ITCService_SendMacro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportZoneInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/ImportZoneInfo" message="tns:ITCService_ImportZoneInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/ImportZoneInfoResponse" message="tns:ITCService_ImportZoneInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZoneUnicode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetZoneUnicode" message="tns:ITCService_GetZoneUnicode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetZoneUnicodeResponse" message="tns:ITCService_GetZoneUnicode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportedChimes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSupportedChimes" message="tns:ITCService_GetSupportedChimes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSupportedChimesResponse" message="tns:ITCService_GetSupportedChimes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCommandState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetLastCommandState" message="tns:ITCService_GetLastCommandState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetLastCommandStateResponse" message="tns:ITCService_GetLastCommandState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPanic">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SendPanic" message="tns:ITCService_SendPanic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SendPanicResponse" message="tns:ITCService_SendPanic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPanelFeatureSet2Info">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetPanelFeatureSet2Info" message="tns:ITCService_GetPanelFeatureSet2Info_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetPanelFeatureSet2InfoResponse" message="tns:ITCService_GetPanelFeatureSet2Info_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTCServiceInstanceStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetCurrentTCServiceInstanceStatus" message="tns:ITCService_GetCurrentTCServiceInstanceStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetCurrentTCServiceInstanceStatusResponse" message="tns:ITCService_GetCurrentTCServiceInstanceStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartUpCurrentTCServiceInstance">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/StartUpCurrentTCServiceInstance" message="tns:ITCService_StartUpCurrentTCServiceInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/StartUpCurrentTCServiceInstanceResponse" message="tns:ITCService_StartUpCurrentTCServiceInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShutDownCurrentTCServiceInstance">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/ShutDownCurrentTCServiceInstance" message="tns:ITCService_ShutDownCurrentTCServiceInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/ShutDownCurrentTCServiceInstanceResponse" message="tns:ITCService_ShutDownCurrentTCServiceInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeSecurityPanel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SynchronizeSecurityPanel" message="tns:ITCService_SynchronizeSecurityPanel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SynchronizeSecurityPanelResponse" message="tns:ITCService_SynchronizeSecurityPanel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomationNetworkStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetAutomationNetworkStatus" message="tns:ITCService_GetAutomationNetworkStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetAutomationNetworkStatusResponse" message="tns:ITCService_GetAutomationNetworkStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfAutomationDevicesInState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetNumberOfAutomationDevicesInState" message="tns:ITCService_GetNumberOfAutomationDevicesInState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetNumberOfAutomationDevicesInStateResponse" message="tns:ITCService_GetNumberOfAutomationDevicesInState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomationDevicesListInState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetAutomationDevicesListInState" message="tns:ITCService_GetAutomationDevicesListInState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetAutomationDevicesListInStateResponse" message="tns:ITCService_GetAutomationDevicesListInState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAutomationDeviceState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetAllAutomationDeviceState" message="tns:ITCService_GetAllAutomationDeviceState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetAllAutomationDeviceStateResponse" message="tns:ITCService_GetAllAutomationDeviceState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralSwitchInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetGeneralSwitchInfo" message="tns:ITCService_GetGeneralSwitchInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetGeneralSwitchInfoResponse" message="tns:ITCService_GetGeneralSwitchInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndividualSwitchInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetIndividualSwitchInfo" message="tns:ITCService_GetIndividualSwitchInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetIndividualSwitchInfoResponse" message="tns:ITCService_GetIndividualSwitchInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSwitchCurrentState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSwitchCurrentState" message="tns:ITCService_GetSwitchCurrentState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSwitchCurrentStateResponse" message="tns:ITCService_GetSwitchCurrentState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSwitchState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetSwitchState" message="tns:ITCService_SetSwitchState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetSwitchStateResponse" message="tns:ITCService_SetSwitchState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameSwitch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/RenameSwitch" message="tns:ITCService_RenameSwitch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/RenameSwitchResponse" message="tns:ITCService_RenameSwitch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralLockInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetGeneralLockInfo" message="tns:ITCService_GetGeneralLockInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetGeneralLockInfoResponse" message="tns:ITCService_GetGeneralLockInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndividualLockInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetIndividualLockInfo" message="tns:ITCService_GetIndividualLockInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetIndividualLockInfoResponse" message="tns:ITCService_GetIndividualLockInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLockCurrentState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetLockCurrentState" message="tns:ITCService_GetLockCurrentState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetLockCurrentStateResponse" message="tns:ITCService_GetLockCurrentState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLockState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetLockState" message="tns:ITCService_SetLockState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetLockStateResponse" message="tns:ITCService_SetLockState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameLock">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/RenameLock" message="tns:ITCService_RenameLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/RenameLockResponse" message="tns:ITCService_RenameLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralThermostatInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetGeneralThermostatInfo" message="tns:ITCService_GetGeneralThermostatInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetGeneralThermostatInfoResponse" message="tns:ITCService_GetGeneralThermostatInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndividualThermostatInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetIndividualThermostatInfo" message="tns:ITCService_GetIndividualThermostatInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetIndividualThermostatInfoResponse" message="tns:ITCService_GetIndividualThermostatInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThermostatCurrentState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetThermostatCurrentState" message="tns:ITCService_GetThermostatCurrentState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetThermostatCurrentStateResponse" message="tns:ITCService_GetThermostatCurrentState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThermostatCurrentStateEx">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetThermostatCurrentStateEx" message="tns:ITCService_GetThermostatCurrentStateEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetThermostatCurrentStateExResponse" message="tns:ITCService_GetThermostatCurrentStateEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetThermostatState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetThermostatState" message="tns:ITCService_SetThermostatState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetThermostatStateResponse" message="tns:ITCService_SetThermostatState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameThermostat">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/RenameThermostat" message="tns:ITCService_RenameThermostat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/RenameThermostatResponse" message="tns:ITCService_RenameThermostat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSceneConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSceneConfiguration" message="tns:ITCService_GetSceneConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSceneConfigurationResponse" message="tns:ITCService_GetSceneConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetScene">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetScene" message="tns:ITCService_SetScene_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetSceneResponse" message="tns:ITCService_SetScene_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScene">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetScene" message="tns:ITCService_GetScene_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSceneResponse" message="tns:ITCService_GetScene_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RunScene">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/RunScene" message="tns:ITCService_RunScene_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/RunSceneResponse" message="tns:ITCService_RunScene_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScene">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/DeleteScene" message="tns:ITCService_DeleteScene_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/DeleteSceneResponse" message="tns:ITCService_DeleteScene_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSceneName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetSceneName" message="tns:ITCService_GetSceneName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetSceneNameResponse" message="tns:ITCService_GetSceneName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSceneName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetSceneName" message="tns:ITCService_SetSceneName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetSceneNameResponse" message="tns:ITCService_SetSceneName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetRuleConfiguration" message="tns:ITCService_GetRuleConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetRuleConfigurationResponse" message="tns:ITCService_GetRuleConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRule">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/DeleteRule" message="tns:ITCService_DeleteRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/DeleteRuleResponse" message="tns:ITCService_DeleteRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetRuleInformation" message="tns:ITCService_GetRuleInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetRuleInformationResponse" message="tns:ITCService_GetRuleInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRule">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetRule" message="tns:ITCService_SetRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetRuleResponse" message="tns:ITCService_SetRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetRuleName" message="tns:ITCService_GetRuleName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetRuleNameResponse" message="tns:ITCService_GetRuleName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRuleName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetRuleName" message="tns:ITCService_SetRuleName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetRuleNameResponse" message="tns:ITCService_SetRuleName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetScheduleConfiguration" message="tns:ITCService_GetScheduleConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetScheduleConfigurationResponse" message="tns:ITCService_GetScheduleConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/DeleteSchedule" message="tns:ITCService_DeleteSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/DeleteScheduleResponse" message="tns:ITCService_DeleteSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetScheduleInformation" message="tns:ITCService_GetScheduleInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetScheduleInformationResponse" message="tns:ITCService_GetScheduleInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetSchedule" message="tns:ITCService_SetSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetScheduleResponse" message="tns:ITCService_SetSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemperatureSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetTemperatureSchedule" message="tns:ITCService_GetTemperatureSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetTemperatureScheduleResponse" message="tns:ITCService_GetTemperatureSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTemperatureSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SetTemperatureSchedule" message="tns:ITCService_SetTemperatureSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SetTemperatureScheduleResponse" message="tns:ITCService_SetTemperatureSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBySlotNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetUserBySlotNumber" message="tns:ITCService_GetUserBySlotNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetUserBySlotNumberResponse" message="tns:ITCService_GetUserBySlotNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SaveUserInformation" message="tns:ITCService_SaveUserInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SaveUserInformationResponse" message="tns:ITCService_SaveUserInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserInformationEx">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/SaveUserInformationEx" message="tns:ITCService_SaveUserInformationEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/SaveUserInformationExResponse" message="tns:ITCService_SaveUserInformationEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserBySlotNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/DeleteUserBySlotNumber" message="tns:ITCService_DeleteUserBySlotNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/DeleteUserBySlotNumberResponse" message="tns:ITCService_DeleteUserBySlotNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserSlotRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetUserSlotRange" message="tns:ITCService_GetUserSlotRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetUserSlotRangeResponse" message="tns:ITCService_GetUserSlotRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorityLevelConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITCService/GetAuthorityLevelConfiguration" message="tns:ITCService_GetAuthorityLevelConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITCService/GetAuthorityLevelConfigurationResponse" message="tns:ITCService_GetAuthorityLevelConfiguration_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITCService" type="tns:ITCService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserAdminAuthorityLevel">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetUserAdminAuthorityLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfigurationSequenceNumber">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetUserConfigurationSequenceNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizePanelUser">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SynchronizePanelUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableUserSlots">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetAvailableUserSlots" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAPIVersion">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetAPIVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartActionConfiguration">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSmartActionConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEditSmartAction">
+      <soap:operation soapAction="http://tempuri.org/ITCService/AddEditSmartAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSmartActionName">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetSmartActionName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartActionName">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSmartActionName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSmartActionState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetSmartActionState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartActionState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSmartActionState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSmartAction">
+      <soap:operation soapAction="http://tempuri.org/ITCService/DeleteSmartAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSmartAction">
+      <soap:operation soapAction="http://tempuri.org/ITCService/ExecuteSmartAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartAction">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSmartAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSmartActionEditingOnPanel">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetSmartActionEditingOnPanel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCloudDeviceToken">
+      <soap:operation soapAction="http://tempuri.org/ITCService/AddCloudDeviceToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeCloudDevice">
+      <soap:operation soapAction="http://tempuri.org/ITCService/AuthorizeCloudDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RevokeCloudDeviceToken">
+      <soap:operation soapAction="http://tempuri.org/ITCService/RevokeCloudDeviceToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCloudDeviceUrl">
+      <soap:operation soapAction="http://tempuri.org/ITCService/ChangeCloudDeviceUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatteryLevel">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetBatteryLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatteryLevelByZoneRange">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetBatteryLevelByZoneRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignalStrengthLevel">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSignalStrengthLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignalStrengthLevelByZoneRange">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSignalStrengthLevelByZoneRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZoneProgrammingCapability">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetZoneProgrammingCapability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryDelays">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetEntryDelays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPanelSoftwareVersion">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetPanelSoftwareVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomArmConfig">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetCustomArmConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCustomArmConfig">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetCustomArmConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArmSystem">
+      <soap:operation soapAction="http://tempuri.org/ITCService/ArmSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisarmSystem">
+      <soap:operation soapAction="http://tempuri.org/ITCService/DisarmSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZonesListInState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetZonesListInState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZoneListInStateWithConsoleInfo">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetZoneListInStateWithConsoleInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaStatusObject">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetAreaStatusObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaStat">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetAreaStat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bypass">
+      <soap:operation soapAction="http://tempuri.org/ITCService/Bypass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpenSession">
+      <soap:operation soapAction="http://tempuri.org/ITCService/OpenSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsConnected">
+      <soap:operation soapAction="http://tempuri.org/ITCService/IsConnected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnections">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetConnections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogFileLocation">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetLogFileLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://tempuri.org/ITCService/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadConsoleDisplay">
+      <soap:operation soapAction="http://tempuri.org/ITCService/ReadConsoleDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseSession">
+      <soap:operation soapAction="http://tempuri.org/ITCService/CloseSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PanelToCommitChanges">
+      <soap:operation soapAction="http://tempuri.org/ITCService/PanelToCommitChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportedZwaveFeatures">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSupportedZwaveFeatures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZwaveConfigSequenceNumber">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetZwaveConfigSequenceNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPanelLanguageConfiguration">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetPanelLanguageConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArmingModes">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetArmingModes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfPartitions">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetNumberOfPartitions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstaller">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetInstaller" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHardwareName">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetHardwareName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSequenceNumber">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSequenceNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCommandInProgressToNone">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetCommandInProgressToNone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommandInProgress">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetCommandInProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfZones">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetNumberOfZones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeArea">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetHomeArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendKey">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SendKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMacro">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SendMacro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportZoneInfo">
+      <soap:operation soapAction="http://tempuri.org/ITCService/ImportZoneInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZoneUnicode">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetZoneUnicode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportedChimes">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSupportedChimes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCommandState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetLastCommandState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPanic">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SendPanic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPanelFeatureSet2Info">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetPanelFeatureSet2Info" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTCServiceInstanceStatus">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetCurrentTCServiceInstanceStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartUpCurrentTCServiceInstance">
+      <soap:operation soapAction="http://tempuri.org/ITCService/StartUpCurrentTCServiceInstance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShutDownCurrentTCServiceInstance">
+      <soap:operation soapAction="http://tempuri.org/ITCService/ShutDownCurrentTCServiceInstance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeSecurityPanel">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SynchronizeSecurityPanel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomationNetworkStatus">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetAutomationNetworkStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfAutomationDevicesInState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetNumberOfAutomationDevicesInState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutomationDevicesListInState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetAutomationDevicesListInState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAutomationDeviceState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetAllAutomationDeviceState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralSwitchInfo">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetGeneralSwitchInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndividualSwitchInfo">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetIndividualSwitchInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSwitchCurrentState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSwitchCurrentState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSwitchState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetSwitchState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameSwitch">
+      <soap:operation soapAction="http://tempuri.org/ITCService/RenameSwitch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralLockInfo">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetGeneralLockInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndividualLockInfo">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetIndividualLockInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLockCurrentState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetLockCurrentState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLockState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetLockState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameLock">
+      <soap:operation soapAction="http://tempuri.org/ITCService/RenameLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralThermostatInfo">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetGeneralThermostatInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndividualThermostatInfo">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetIndividualThermostatInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThermostatCurrentState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetThermostatCurrentState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThermostatCurrentStateEx">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetThermostatCurrentStateEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetThermostatState">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetThermostatState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameThermostat">
+      <soap:operation soapAction="http://tempuri.org/ITCService/RenameThermostat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSceneConfiguration">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSceneConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScene">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetScene" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScene">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetScene" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunScene">
+      <soap:operation soapAction="http://tempuri.org/ITCService/RunScene" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScene">
+      <soap:operation soapAction="http://tempuri.org/ITCService/DeleteScene" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSceneName">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetSceneName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSceneName">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetSceneName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleConfiguration">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetRuleConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRule">
+      <soap:operation soapAction="http://tempuri.org/ITCService/DeleteRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleInformation">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetRuleInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRule">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleName">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetRuleName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRuleName">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetRuleName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleConfiguration">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetScheduleConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSchedule">
+      <soap:operation soapAction="http://tempuri.org/ITCService/DeleteSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleInformation">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetScheduleInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchedule">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemperatureSchedule">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetTemperatureSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTemperatureSchedule">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SetTemperatureSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBySlotNumber">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetUserBySlotNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserInformation">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SaveUserInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserInformationEx">
+      <soap:operation soapAction="http://tempuri.org/ITCService/SaveUserInformationEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserBySlotNumber">
+      <soap:operation soapAction="http://tempuri.org/ITCService/DeleteUserBySlotNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserSlotRange">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetUserSlotRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorityLevelConfiguration">
+      <soap:operation soapAction="http://tempuri.org/ITCService/GetAuthorityLevelConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TCService">
+    <wsdl:port name="BasicHttpBinding_ITCService" binding="tns:BasicHttpBinding_ITCService">
+      <soap:address location="http://10.171.146.40:8500/TCService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

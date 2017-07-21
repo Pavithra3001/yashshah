@@ -1,0 +1,41 @@
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\bin\Debug\ShabakahSimulator.exe.config
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\bin\Debug\ShabakahSimulator.exe
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\bin\Debug\ShabakahSimulator.pdb
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\bin\Debug\LoggerComponent.dll
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\bin\Debug\ShabakahEntityManager.dll
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\bin\Debug\ShabakahRedir.dll
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\bin\Debug\LoggerComponent.pdb
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\bin\Debug\ShabakahEntityManager.pdb
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\bin\Debug\ShabakahRedir.pdb
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\obj\Debug\ShabakahSimulator.csprojResolveAssemblyReference.cache
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\obj\Debug\ShabakahSimulator.ConfigurePanels.resources
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\obj\Debug\ShabakahSimulator.ShabakahSimulatorMainForm.resources
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\obj\Debug\ShabakahSimulator.Properties.Resources.resources
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\obj\Debug\ShabakahSimulator.csproj.GenerateResource.Cache
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\obj\Debug\ShabakahSimulator.exe
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\obj\Debug\ShabakahSimulator.pdb
+C:\TestAutomation\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\ShabakahSimulator.exe.config
+C:\TestAutomation\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.exe
+C:\TestAutomation\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\ShabakahSimulator.exe.config
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.exe
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\ShabakahSimulator.exe
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\ShabakahSimulator.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\LoggerComponent.dll
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\ShabakahEntityManager.dll
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\ShabakahRedir.dll
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\LoggerComponent.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\ShabakahEntityManager.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\ShabakahRedir.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.csprojResolveAssemblyReference.cache
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.ConfigurePanels.resources
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.ShabakahSimulatorMainForm.resources
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.Properties.Resources.resources
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.csproj.GenerateResource.Cache
+C:\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\ShabakahSimulator.exe.config
+C:\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.exe
+C:\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.pdb
+C:\Users\h225716\Documents\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\bin\Debug\ShabakahSimulator.exe.config
+C:\Users\h225716\Documents\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.exe
+C:\Users\h225716\Documents\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahSimulator\obj\Debug\ShabakahSimulator.pdb

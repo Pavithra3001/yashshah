@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.Collections.Generic" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcServiceDomain" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfKeyValuePairOfeZoneConditioninteJOS_SgOH">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValuePairOfeZoneConditioninteJOS_SgOH" type="tns:KeyValuePairOfeZoneConditioninteJOS_SgOH" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKeyValuePairOfeZoneConditioninteJOS_SgOH" nillable="true" type="tns:ArrayOfKeyValuePairOfeZoneConditioninteJOS_SgOH" />
+  <xs:complexType name="KeyValuePairOfeZoneConditioninteJOS_SgOH">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="KeyValuePairOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="eZoneCondition" Namespace="http://schemas.datacontract.org/2004/07/tcServiceDomain" />
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/tcServiceDomain" name="key" type="q1:eZoneCondition" />
+      <xs:element name="value" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KeyValuePairOfeZoneConditioninteJOS_SgOH" nillable="true" type="tns:KeyValuePairOfeZoneConditioninteJOS_SgOH" />
+  <xs:complexType name="ArrayOfKeyValuePairOfeZoneConditionbooleaneJOS_SgOH">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValuePairOfeZoneConditionbooleaneJOS_SgOH" type="tns:KeyValuePairOfeZoneConditionbooleaneJOS_SgOH" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKeyValuePairOfeZoneConditionbooleaneJOS_SgOH" nillable="true" type="tns:ArrayOfKeyValuePairOfeZoneConditionbooleaneJOS_SgOH" />
+  <xs:complexType name="KeyValuePairOfeZoneConditionbooleaneJOS_SgOH">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="KeyValuePairOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="eZoneCondition" Namespace="http://schemas.datacontract.org/2004/07/tcServiceDomain" />
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/tcServiceDomain" name="key" type="q2:eZoneCondition" />
+      <xs:element name="value" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KeyValuePairOfeZoneConditionbooleaneJOS_SgOH" nillable="true" type="tns:KeyValuePairOfeZoneConditionbooleaneJOS_SgOH" />
+</xs:schema>

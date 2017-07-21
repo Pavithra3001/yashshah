@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.SmartAction" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.SmartAction" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/TCService.SharedDomain.SmartAction" />
+  <xs:complexType name="SmartActionConfiguration">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" base="q1:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrentSmartActionCount" type="xs:int" />
+          <xs:element minOccurs="0" name="MaximumDevicesPerSmartAction" type="xs:int" />
+          <xs:element minOccurs="0" name="MaximumNameLength" type="xs:int" />
+          <xs:element minOccurs="0" name="MaximumSmartActions" type="xs:int" />
+          <xs:element minOccurs="0" name="SmartActionEditingEnabled" type="xs:boolean" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SmartActionNumbers" nillable="true" type="q2:ArrayOfint" />
+          <xs:element minOccurs="0" name="UnicodeNameSupport" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SmartActionConfiguration" nillable="true" type="tns:SmartActionConfiguration" />
+  <xs:complexType name="SmartActionNameResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" base="q3:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SmartActionName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SmartActionNameResult" nillable="true" type="tns:SmartActionNameResult" />
+  <xs:complexType name="SmartActionStateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" base="q4:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SmartActionState" nillable="true" type="q5:ArrayOfKeyValueOfinteSmartActionStateIEa5VARa" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SmartActionStateResult" nillable="true" type="tns:SmartActionStateResult" />
+  <xs:complexType name="SmartActionResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" base="q6:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/TCService.SharedDomain.SmartAction" minOccurs="0" name="SmartAction" nillable="true" type="q7:SmartAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SmartActionResult" nillable="true" type="tns:SmartActionResult" />
+</xs:schema>

@@ -1,0 +1,1060 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/tcServiceDomain" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/tcServiceDomain" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="TC2UserManagementRequestInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountID" type="xs:long" />
+      <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeviceID" type="xs:long" />
+      <xs:element minOccurs="0" name="LocationID" type="xs:long" />
+      <xs:element minOccurs="0" name="PreviousCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestingUserID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TC2UserManagementRequestInfo" nillable="true" type="tns:TC2UserManagementRequestInfo" />
+  <xs:complexType name="UserSlots">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UnUsedSlots" nillable="true" type="q1:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserSlots" nillable="true" type="tns:UserSlots" />
+  <xs:complexType name="ArrayOfZoneStatusInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZoneStatusInfo" nillable="true" type="tns:ZoneStatusInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZoneStatusInfo" nillable="true" type="tns:ArrayOfZoneStatusInfo" />
+  <xs:complexType name="ZoneStatusInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ZoneID" type="xs:int" />
+      <xs:element minOccurs="0" name="ZoneStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZoneStatusInfo" nillable="true" type="tns:ZoneStatusInfo" />
+  <xs:complexType name="ZoneStatusListWithConsoleinfoObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsoleDisplayInfo" nillable="true" type="tns:ConsoleInfo" />
+      <xs:element minOccurs="0" name="Zones" nillable="true" type="tns:ArrayOfZoneStatusInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZoneStatusListWithConsoleinfoObject" nillable="true" type="tns:ZoneStatusListWithConsoleinfoObject" />
+  <xs:complexType name="ConsoleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LEDStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsoleInfo" nillable="true" type="tns:ConsoleInfo" />
+  <xs:complexType name="PanelToCommitInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommitStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PanelToCommitInfo" nillable="true" type="tns:PanelToCommitInfo" />
+  <xs:complexType name="ZwaveConfigInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsScheduling" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgrammingFlag" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SupportedDevices" nillable="true" type="q2:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZwaveConfigInfo" nillable="true" type="tns:ZwaveConfigInfo" />
+  <xs:complexType name="GetZwaveConfigSequenceNumber">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SequenceNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetZwaveConfigSequenceNumber" nillable="true" type="tns:GetZwaveConfigSequenceNumber" />
+  <xs:complexType name="PanelLanguageCapability">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentLanguage" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SupportedLanguages" nillable="true" type="q3:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PanelLanguageCapability" nillable="true" type="tns:PanelLanguageCapability" />
+  <xs:complexType name="ArmingModes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HasAway" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasCustomArm" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasInstant" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasMaximum" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasNight" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasStay" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArmingModes" nillable="true" type="tns:ArmingModes" />
+  <xs:complexType name="ArrayOfZoneInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZoneInformation" nillable="true" type="tns:ZoneInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZoneInformation" nillable="true" type="tns:ArrayOfZoneInformation" />
+  <xs:complexType name="ZoneInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlarmReportEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ApplicationType" type="tns:eZoneApplicationDeviceType" />
+      <xs:element minOccurs="0" name="ChimeEnabled" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="ChimeSelected" nillable="true" type="q4:ArrayOfKeyValuePairOfeZoneConditioninteJOS_SgOH" />
+      <xs:element minOccurs="0" name="ExclusionEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNew" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LoopNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PartitionIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupervisionType" type="tns:eZoneSupervisionType" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="VoiceAnnunciationEnabled" nillable="true" type="q5:ArrayOfKeyValuePairOfeZoneConditionbooleaneJOS_SgOH" />
+      <xs:element minOccurs="0" name="ZoneDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZoneDeviceTypeID" type="tns:ZoneDeviceType" />
+      <xs:element minOccurs="0" name="ZoneIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="ZoneTypeID" type="tns:ZoneType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZoneInformation" nillable="true" type="tns:ZoneInformation" />
+  <xs:simpleType name="eZoneApplicationDeviceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Door" />
+      <xs:enumeration value="Window" />
+      <xs:enumeration value="MotionSensor" />
+      <xs:enumeration value="GlassBreak" />
+      <xs:enumeration value="SmokeDetector" />
+      <xs:enumeration value="HeatSensor" />
+      <xs:enumeration value="CarbonMonoxideDetector" />
+      <xs:enumeration value="Temperature" />
+      <xs:enumeration value="Flood" />
+      <xs:enumeration value="Environmental" />
+      <xs:enumeration value="Medical" />
+      <xs:enumeration value="Fire" />
+      <xs:enumeration value="Police" />
+      <xs:enumeration value="GarageDoor" />
+      <xs:enumeration value="New" />
+      <xs:enumeration value="Other" />
+      <xs:enumeration value="OneButton" />
+      <xs:enumeration value="TwoButton" />
+      <xs:enumeration value="FourButton" />
+      <xs:enumeration value="SixButton" />
+      <xs:enumeration value="EightButton" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eZoneApplicationDeviceType" nillable="true" type="tns:eZoneApplicationDeviceType" />
+  <xs:simpleType name="eZoneCondition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Usage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Error">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Maintenance">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eZoneCondition" nillable="true" type="tns:eZoneCondition" />
+  <xs:simpleType name="eZoneSupervisionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Supervised" />
+      <xs:enumeration value="Unsupervised" />
+      <xs:enumeration value="PanicTriggered" />
+      <xs:enumeration value="HighTemperature" />
+      <xs:enumeration value="LowTemperature" />
+      <xs:enumeration value="Button" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eZoneSupervisionType" nillable="true" type="tns:eZoneSupervisionType" />
+  <xs:simpleType name="ZoneDeviceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotUsed" />
+      <xs:enumeration value="HardWired" />
+      <xs:enumeration value="RFMotionOrAuxWire" />
+      <xs:enumeration value="RFType" />
+      <xs:enumeration value="URType" />
+      <xs:enumeration value="BRType" />
+      <xs:enumeration value="SLType" />
+      <xs:enumeration value="DIPSwitchTypePollingLoopDevice" />
+      <xs:enumeration value="RightLoopOfDIPSwitchTypeDevice" />
+      <xs:enumeration value="KeypadInput" />
+      <xs:enumeration value="PassPointAccessControl" />
+      <xs:enumeration value="VistaKeyDoorStatusMonitor" />
+      <xs:enumeration value="VistaKeyRequestToExit" />
+      <xs:enumeration value="VistaKeyGeneralPurpose" />
+      <xs:enumeration value="CODetectorAlarm" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ZoneDeviceType" nillable="true" type="tns:ZoneDeviceType" />
+  <xs:simpleType name="ZoneType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotUsed" />
+      <xs:enumeration value="EntryExit1Burglary" />
+      <xs:enumeration value="EntryExit2Burglary" />
+      <xs:enumeration value="PerimeterBurglary" />
+      <xs:enumeration value="InteriorFollowerBurglary" />
+      <xs:enumeration value="TroubleDayAlarmNight" />
+      <xs:enumeration value="SilentAlarm24Hour" />
+      <xs:enumeration value="AudibleAlarm24Hour" />
+      <xs:enumeration value="Auxilary24Hour" />
+      <xs:enumeration value="FireWithoutVerification" />
+      <xs:enumeration value="InteriorDelayBurglary" />
+      <xs:enumeration value="PanelLinkSuprvisionOr24HourMonitor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RemotePS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CODetectorAlarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Medical24Hour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FireWithVerification">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FireWaterFlow">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FireSupervisory">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Trouble24Hour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ArmStay5800">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ArmAway5800">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Disarm5800">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoAlarmResponse">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SilentBurglary">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="JiffyLube24Hour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AccessPoint">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MLBSupervision">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">28</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MomentaryExit">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Keyswitch">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">77</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AAVMonitor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">81</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ResidentMonitor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">85</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ResidentResponse">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">86</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoConfirmationResidentMonitor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">87</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoConfirmationResidentResponse">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">88</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ZoneType" nillable="true" type="tns:ZoneType" />
+  <xs:complexType name="PanelFeatureSet2Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsAutoOnBoardSupported" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOutputSchedulingSupported" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsZwaveSupported" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UnicodeType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PanelFeatureSet2Info" nillable="true" type="tns:PanelFeatureSet2Info" />
+  <xs:complexType name="AutomationNetworkStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="NetworkStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutomationNetworkStatus" nillable="true" type="tns:AutomationNetworkStatus" />
+  <xs:complexType name="AutomationDeviceCountInfoList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceInfo" nillable="true" type="tns:ArrayOfAutomationDeviceCountInfo" />
+      <xs:element minOccurs="0" name="DeviceState" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutomationDeviceCountInfoList" nillable="true" type="tns:AutomationDeviceCountInfoList" />
+  <xs:complexType name="ArrayOfAutomationDeviceCountInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutomationDeviceCountInfo" nillable="true" type="tns:AutomationDeviceCountInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutomationDeviceCountInfo" nillable="true" type="tns:ArrayOfAutomationDeviceCountInfo" />
+  <xs:complexType name="AutomationDeviceCountInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceCount" type="xs:int" />
+      <xs:element minOccurs="0" name="DeviceType" type="tns:AutomationDeviceType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutomationDeviceCountInfo" nillable="true" type="tns:AutomationDeviceCountInfo" />
+  <xs:simpleType name="AutomationDeviceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Switch" />
+      <xs:enumeration value="Lock" />
+      <xs:enumeration value="Thermostat" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutomationDeviceType" nillable="true" type="tns:AutomationDeviceType" />
+  <xs:complexType name="ArrayOfIndividualDeviceStateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IndividualDeviceStateInfo" nillable="true" type="tns:IndividualDeviceStateInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIndividualDeviceStateInfo" nillable="true" type="tns:ArrayOfIndividualDeviceStateInfo" />
+  <xs:complexType name="IndividualDeviceStateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="DeviceState" type="xs:int" />
+      <xs:element minOccurs="0" name="DeviceType" type="tns:AutomationDeviceType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IndividualDeviceStateInfo" nillable="true" type="tns:IndividualDeviceStateInfo" />
+  <xs:complexType name="SwitchConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capacity" type="xs:int" />
+      <xs:element minOccurs="0" name="ManufacturerNameCapacity" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberOfStatusFields" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberofCategories" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgrammedSwitches" type="xs:int" />
+      <xs:element minOccurs="0" name="SwitchNameCapacity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SwitchConfiguration" nillable="true" type="tns:SwitchConfiguration" />
+  <xs:complexType name="SwitchInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AutomationClass">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SwitchLevel" type="xs:int" />
+          <xs:element minOccurs="0" name="SwitchState" type="xs:int" />
+          <xs:element minOccurs="0" name="SwitchType" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SwitchInfo" nillable="true" type="tns:SwitchInfo" />
+  <xs:complexType name="AutomationClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="Instance" type="xs:int" />
+      <xs:element minOccurs="0" name="ManufacturerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutomationClass" nillable="true" type="tns:AutomationClass" />
+  <xs:complexType name="ArrayOfSwitchStateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SwitchStateInfo" nillable="true" type="tns:SwitchStateInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSwitchStateInfo" nillable="true" type="tns:ArrayOfSwitchStateInfo" />
+  <xs:complexType name="SwitchStateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSwitchStatusAvailable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SwitchLevel" type="xs:int" />
+      <xs:element minOccurs="0" name="SwitchState" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SwitchStateInfo" nillable="true" type="tns:SwitchStateInfo" />
+  <xs:complexType name="LockConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capacity" type="xs:int" />
+      <xs:element minOccurs="0" name="LockNameCapacity" type="xs:int" />
+      <xs:element minOccurs="0" name="ManufacturerNameCapacity" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberOfStatusFields" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberofCategories" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgrammedLocks" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LockConfiguration" nillable="true" type="tns:LockConfiguration" />
+  <xs:complexType name="LockInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AutomationClass">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BatteryStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="LastOperation" type="xs:int" />
+          <xs:element minOccurs="0" name="LastOperationUserNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="LockState" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LockInfo" nillable="true" type="tns:LockInfo" />
+  <xs:complexType name="ArrayOfLockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LockInfo" nillable="true" type="tns:LockInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLockInfo" nillable="true" type="tns:ArrayOfLockInfo" />
+  <xs:complexType name="ArrayOfLockStateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LockStateInfo" nillable="true" type="tns:LockStateInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLockStateInfo" nillable="true" type="tns:ArrayOfLockStateInfo" />
+  <xs:complexType name="LockStateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="LockDesiredState" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LockStateInfo" nillable="true" type="tns:LockStateInfo" />
+  <xs:complexType name="ThermostatConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capacity" type="xs:int" />
+      <xs:element minOccurs="0" name="ManufacturerNameCapacity" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberOfStatusFields" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberofCategories" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgrammedThermoStats" type="xs:int" />
+      <xs:element minOccurs="0" name="ThermostatNameCapacity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThermostatConfiguration" nillable="true" type="tns:ThermostatConfiguration" />
+  <xs:complexType name="ThermostatInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AutomationClass">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BatteryStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="CurrentFanModeId" type="xs:int" />
+          <xs:element minOccurs="0" name="CurrentMode" nillable="true" type="tns:ThermostatMode" />
+          <xs:element minOccurs="0" name="CurrentOpMode" nillable="true" type="tns:ThermostatCurrentOpMode" />
+          <xs:element minOccurs="0" name="CurrentTemp" type="xs:int" />
+          <xs:element minOccurs="0" name="DirtyFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FanMode" nillable="true" type="tns:ArrayOfThermostatFanMode" />
+          <xs:element minOccurs="0" name="MeasurementUnit" type="xs:int" />
+          <xs:element minOccurs="0" name="Mode" nillable="true" type="tns:ArrayOfThermostatMode" />
+          <xs:element minOccurs="0" name="SupportedOpMode" nillable="true" type="tns:ArrayOfThermostatSupportedOpMode" />
+          <xs:element minOccurs="0" name="ThermostatModeSetPoint" nillable="true" type="tns:ThermostatModeSetPoint" />
+          <xs:element minOccurs="0" name="ThresholdPoint" nillable="true" type="tns:ThermostatThresholdPoint" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ThermostatInfo" nillable="true" type="tns:ThermostatInfo" />
+  <xs:complexType name="ThermostatMode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ModeID" type="xs:int" />
+      <xs:element minOccurs="0" name="SetPoint1" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SetPoint2" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThermostatMode" nillable="true" type="tns:ThermostatMode" />
+  <xs:complexType name="ThermostatCurrentOpMode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ModeID" type="xs:int" />
+      <xs:element minOccurs="0" name="SetPoint1" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SetPoint2" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThermostatCurrentOpMode" nillable="true" type="tns:ThermostatCurrentOpMode" />
+  <xs:complexType name="ArrayOfThermostatFanMode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ThermostatFanMode" nillable="true" type="tns:ThermostatFanMode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThermostatFanMode" nillable="true" type="tns:ArrayOfThermostatFanMode" />
+  <xs:complexType name="ThermostatFanMode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ModeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThermostatFanMode" nillable="true" type="tns:ThermostatFanMode" />
+  <xs:complexType name="ArrayOfThermostatMode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ThermostatMode" nillable="true" type="tns:ThermostatMode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThermostatMode" nillable="true" type="tns:ArrayOfThermostatMode" />
+  <xs:complexType name="ArrayOfThermostatSupportedOpMode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ThermostatSupportedOpMode" nillable="true" type="tns:ThermostatSupportedOpMode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThermostatSupportedOpMode" nillable="true" type="tns:ArrayOfThermostatSupportedOpMode" />
+  <xs:complexType name="ThermostatSupportedOpMode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ModeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThermostatSupportedOpMode" nillable="true" type="tns:ThermostatSupportedOpMode" />
+  <xs:complexType name="ThermostatModeSetPoint">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CoolSetPoint" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EnergySaveCoolPoint" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EnergySaveHeatPoint" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HeatSetPoint" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThermostatModeSetPoint" nillable="true" type="tns:ThermostatModeSetPoint" />
+  <xs:complexType name="ThermostatThresholdPoint">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CoolThresholdStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="HeatThresholdStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="SetPoint1" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SetPoint2" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThermostatThresholdPoint" nillable="true" type="tns:ThermostatThresholdPoint" />
+  <xs:complexType name="ArrayOfThermostatStateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ThermostatStateInfo" nillable="true" type="tns:ThermostatStateInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThermostatStateInfo" nillable="true" type="tns:ArrayOfThermostatStateInfo" />
+  <xs:complexType name="ThermostatStateInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Thermostat">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BatteryStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="CoolSetPoint" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CurrentTemp" type="xs:int" />
+          <xs:element minOccurs="0" name="DeviceStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="EnergySaveCoolPoint" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EnergySaveHeatPoint" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HeatSetPoint" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ModeID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ThermostatStateInfo" nillable="true" type="tns:ThermostatStateInfo" />
+  <xs:complexType name="Thermostat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentFanModeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentMode" nillable="true" type="tns:ThermostatMode" />
+      <xs:element minOccurs="0" name="CurrentOpMode" nillable="true" type="tns:ThermostatCurrentOpMode" />
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="ThresholdPoint" nillable="true" type="tns:ThermostatThresholdPoint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Thermostat" nillable="true" type="tns:Thermostat" />
+  <xs:complexType name="ArrayOfThermostatStateExInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ThermostatStateExInfo" nillable="true" type="tns:ThermostatStateExInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThermostatStateExInfo" nillable="true" type="tns:ArrayOfThermostatStateExInfo" />
+  <xs:complexType name="ThermostatStateExInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatteryStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="CoolSetPoint" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentFanModeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentMode" nillable="true" type="tns:ThermostatMode" />
+      <xs:element minOccurs="0" name="CurrentOpMode" nillable="true" type="tns:ThermostatCurrentOpMode" />
+      <xs:element minOccurs="0" name="CurrentTemp" type="xs:int" />
+      <xs:element minOccurs="0" name="DeviceStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="EnergySaveCoolPoint" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EnergySaveHeatPoint" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HeatSetPoint" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="ModeID" type="xs:int" />
+      <xs:element minOccurs="0" name="ThresholdPoint" nillable="true" type="tns:ThermostatThresholdPoint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThermostatStateExInfo" nillable="true" type="tns:ThermostatStateExInfo" />
+  <xs:complexType name="ArrayOfThermostat">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Thermostat" nillable="true" type="tns:Thermostat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThermostat" nillable="true" type="tns:ArrayOfThermostat" />
+  <xs:complexType name="SceneConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capacity" type="xs:int" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="DeviceCapacityPerScene" type="xs:int" />
+      <xs:element minOccurs="0" name="ModifiableSlotRange" nillable="true" type="tns:SlotRange" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ProgrammedSceneNumbers" nillable="true" type="q6:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SceneConfiguration" nillable="true" type="tns:SceneConfiguration" />
+  <xs:complexType name="SlotRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Maximum" type="xs:int" />
+      <xs:element minOccurs="0" name="Minimum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SlotRange" nillable="true" type="tns:SlotRange" />
+  <xs:complexType name="Scene">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutomationDeviceSettings" nillable="true" type="tns:ArrayOfAutomationDeviceSetting" />
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Scene" nillable="true" type="tns:Scene" />
+  <xs:complexType name="ArrayOfAutomationDeviceSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutomationDeviceSetting" nillable="true" type="tns:AutomationDeviceSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutomationDeviceSetting" nillable="true" type="tns:ArrayOfAutomationDeviceSetting" />
+  <xs:complexType name="AutomationDeviceSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutomationDeviceType" type="tns:AutomationDeviceType" />
+      <xs:element minOccurs="0" name="DeviceIndex" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutomationDeviceSetting" nillable="true" type="tns:AutomationDeviceSetting" />
+  <xs:complexType name="ThermostatSetting">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AutomationDeviceSetting">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ThermostatFanModeSetting" nillable="true" type="tns:ThermostatFanMode" />
+          <xs:element minOccurs="0" name="ThermostatModeSetting" nillable="true" type="tns:ThermostatModeSetting" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ThermostatSetting" nillable="true" type="tns:ThermostatSetting" />
+  <xs:complexType name="ThermostatModeSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ModeID" type="xs:int" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SetPoints" nillable="true" type="q7:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThermostatModeSetting" nillable="true" type="tns:ThermostatModeSetting" />
+  <xs:complexType name="LockSetting">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AutomationDeviceSetting">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesiredState" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LockSetting" nillable="true" type="tns:LockSetting" />
+  <xs:complexType name="SwitchSetting">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AutomationDeviceSetting">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DesiredState" type="xs:int" />
+          <xs:element minOccurs="0" name="DimmerLevel" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SwitchSetting" nillable="true" type="tns:SwitchSetting" />
+  <xs:complexType name="RuleConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capacity" type="xs:int" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="ModifiableSlotRange" nillable="true" type="tns:SlotRange" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ProgrammedRuleNumbers" nillable="true" type="q8:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuleConfiguration" nillable="true" type="tns:RuleConfiguration" />
+  <xs:complexType name="EventAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnyUserLockOperation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EndSystemOperation" type="tns:SystemOperation" />
+      <xs:element minOccurs="0" name="FaultConditionZoneType" type="tns:ZoneType" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FaultZoneNumbers" nillable="true" type="q9:ArrayOfint" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LockAction" type="tns:SystemOperation" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RestoreConditionZoneType" type="tns:ZoneType" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RestoreZoneNumbers" nillable="true" type="q10:ArrayOfint" />
+      <xs:element minOccurs="0" name="RuleAction" type="xs:int" />
+      <xs:element minOccurs="0" name="RuleType" type="xs:int" />
+      <xs:element minOccurs="0" name="StartSystemOperation" type="tns:SystemOperation" />
+      <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UserLockOperation" nillable="true" type="q11:ArrayOfint" />
+      <xs:element minOccurs="0" name="ZoneOperationType" type="tns:ZoneOperationType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventAction" nillable="true" type="tns:EventAction" />
+  <xs:simpleType name="SystemOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotUsed" />
+      <xs:enumeration value="ArmStay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ArmAway">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Disarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EndExitDelay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="StartEntryDelay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AnyBurglaryAlarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BellTimeout">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">36</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Chime">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">38</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Kissoff">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">52</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AnyFireAlarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">39</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bypass">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SystemLowBattery">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">42</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CommFailure">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">43</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DuressAlarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">58</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ArmStayNight">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">59</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SystemOperation" nillable="true" type="tns:SystemOperation" />
+  <xs:simpleType name="ZoneOperationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotUsed" />
+      <xs:enumeration value="Fault" />
+      <xs:enumeration value="Trouble" />
+      <xs:enumeration value="Alarm" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ZoneOperationType" nillable="true" type="tns:ZoneOperationType" />
+  <xs:complexType name="ScheduleConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capacity" type="xs:int" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="HasRandomize" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasSunriseSunset" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxNameLength" type="xs:int" />
+      <xs:element minOccurs="0" name="ModifiableSlotRange" nillable="true" type="tns:SlotRange" />
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ProgrammedScheduleNumbers" nillable="true" type="q12:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ScheduleConfiguration" nillable="true" type="tns:ScheduleConfiguration" />
+  <xs:complexType name="Schedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssociatedParameter" type="xs:int" />
+      <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DaySpecifier" nillable="true" type="q13:ArrayOfint" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Frequency" type="tns:ScheduleFrequency" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Randomize" type="xs:int" />
+      <xs:element minOccurs="0" name="ScheduleDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ScheduleType" type="tns:ScheduleType" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Sunrise" type="xs:int" />
+      <xs:element minOccurs="0" name="Sunset" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Schedule" nillable="true" type="tns:Schedule" />
+  <xs:simpleType name="ScheduleFrequency">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Once" />
+      <xs:enumeration value="Daily" />
+      <xs:enumeration value="Weekday" />
+      <xs:enumeration value="Weekly" />
+      <xs:enumeration value="Monthly" />
+      <xs:enumeration value="Sunrise" />
+      <xs:enumeration value="Sunset" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ScheduleFrequency" nillable="true" type="tns:ScheduleFrequency" />
+  <xs:simpleType name="ScheduleType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="AutoStay" />
+      <xs:enumeration value="Output" />
+      <xs:enumeration value="DisArmNotification" />
+      <xs:enumeration value="Rules" />
+      <xs:enumeration value="Scenes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ScheduleType" nillable="true" type="tns:ScheduleType" />
+  <xs:complexType name="TemperatureSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CoolSetbackTemperature" type="xs:int" />
+      <xs:element minOccurs="0" name="DaysTemperature" nillable="true" type="tns:ArrayOfDayTemperatureSchedule" />
+      <xs:element minOccurs="0" name="HeatSetbackTemperature" type="xs:int" />
+      <xs:element minOccurs="0" name="ThermostatId" type="xs:int" />
+      <xs:element minOccurs="0" name="ThermostatIndex" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TemperatureSchedule" nillable="true" type="tns:TemperatureSchedule" />
+  <xs:complexType name="ArrayOfDayTemperatureSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DayTemperatureSchedule" nillable="true" type="tns:DayTemperatureSchedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDayTemperatureSchedule" nillable="true" type="tns:ArrayOfDayTemperatureSchedule" />
+  <xs:complexType name="DayTemperatureSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DayNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="DayTimePeriods" nillable="true" type="tns:ArrayOfTimePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DayTemperatureSchedule" nillable="true" type="tns:DayTemperatureSchedule" />
+  <xs:complexType name="ArrayOfTimePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimePeriod" nillable="true" type="tns:TimePeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimePeriod" nillable="true" type="tns:ArrayOfTimePeriod" />
+  <xs:complexType name="TimePeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CoolSetPoint" type="xs:int" />
+      <xs:element minOccurs="0" name="HeatSetPoint" type="xs:int" />
+      <xs:element minOccurs="0" name="IsTimePeriodEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimePeriod" nillable="true" type="tns:TimePeriod" />
+  <xs:complexType name="ArrayOfPanelUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PanelUser" nillable="true" type="tns:PanelUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPanelUser" nillable="true" type="tns:ArrayOfPanelUser" />
+  <xs:complexType name="PanelUser">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CALCommandResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExtendedUserOptions" nillable="true" type="tns:ArrayOfUserOption" />
+          <xs:element minOccurs="0" name="PartitionAuthority" nillable="true" type="tns:ArrayOfPartitionAuthority" />
+          <xs:element minOccurs="0" name="PartitionUserOptions" nillable="true" type="tns:ArrayOfUserOption" />
+          <xs:element minOccurs="0" name="SlotNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PanelUser" nillable="true" type="tns:PanelUser" />
+  <xs:complexType name="CALCommandResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommandResultCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CALCommandResult" nillable="true" type="tns:CALCommandResult" />
+  <xs:complexType name="ArrayOfUserOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserOption" nillable="true" type="tns:UserOption" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserOption" nillable="true" type="tns:ArrayOfUserOption" />
+  <xs:complexType name="UserOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OptionNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="OptionValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserOption" nillable="true" type="tns:UserOption" />
+  <xs:complexType name="ArrayOfPartitionAuthority">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PartitionAuthority" nillable="true" type="tns:PartitionAuthority" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPartitionAuthority" nillable="true" type="tns:ArrayOfPartitionAuthority" />
+  <xs:complexType name="PartitionAuthority">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthorityLevel" type="xs:int" />
+      <xs:element minOccurs="0" name="PartitionNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PartitionAuthority" nillable="true" type="tns:PartitionAuthority" />
+</xs:schema>

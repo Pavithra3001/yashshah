@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcServiceDomain" />
+  <xs:complexType name="GetUserAdminAuthorityLevelResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequiredAuthorityLevel" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetUserAdminAuthorityLevelResult" nillable="true" type="tns:GetUserAdminAuthorityLevelResult" />
+  <xs:complexType name="WebMethodResults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultData" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebMethodResults" nillable="true" type="tns:WebMethodResults" />
+  <xs:complexType name="UserConfigurationSequenceNumberResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserConfigurationSequenceNumber" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserConfigurationSequenceNumberResult" nillable="true" type="tns:UserConfigurationSequenceNumberResult" />
+  <xs:complexType name="SynchronizePanelUserResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SynchronizePanelUserResult" nillable="true" type="tns:SynchronizePanelUserResult" />
+  <xs:complexType name="GetAvailableUserSlotsResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="AvailableSlots" nillable="true" type="q1:UserSlots" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAvailableUserSlotsResult" nillable="true" type="tns:GetAvailableUserSlotsResult" />
+  <xs:complexType name="ArmSystemResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ResultStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArmSystemResult" nillable="true" type="tns:ArmSystemResult" />
+  <xs:complexType name="DisarmSystemResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ResultStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DisarmSystemResult" nillable="true" type="tns:DisarmSystemResult" />
+  <xs:complexType name="GetZonesListInStateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ZoneStatusInfo" nillable="true" type="q2:ArrayOfZoneStatusInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetZonesListInStateResult" nillable="true" type="tns:GetZonesListInStateResult" />
+  <xs:complexType name="GetZoneListInStateWithConsoleInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ZoneStatusWithConsoleInfo" nillable="true" type="q3:ZoneStatusListWithConsoleinfoObject" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetZoneListInStateWithConsoleInfoResult" nillable="true" type="tns:GetZoneListInStateWithConsoleInfoResult" />
+  <xs:complexType name="ReadConsoleDisplayResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="DisplayStatus" nillable="true" type="q4:ConsoleInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReadConsoleDisplayResult" nillable="true" type="tns:ReadConsoleDisplayResult" />
+  <xs:complexType name="PanelToCommitInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="PanelToCommitInfo" nillable="true" type="q5:PanelToCommitInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PanelToCommitInfoResult" nillable="true" type="tns:PanelToCommitInfoResult" />
+  <xs:complexType name="GetSupportedZwaveFeaturesResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ZwaveConfigInfo" nillable="true" type="q6:ZwaveConfigInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSupportedZwaveFeaturesResult" nillable="true" type="tns:GetSupportedZwaveFeaturesResult" />
+  <xs:complexType name="GetZwaveConfigSequenceNumberResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="GetZwaveConfigSequenceNumber" nillable="true" type="q7:GetZwaveConfigSequenceNumber" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetZwaveConfigSequenceNumberResult" nillable="true" type="tns:GetZwaveConfigSequenceNumberResult" />
+  <xs:complexType name="GetPanelLanguaageCapabilityResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="LanguageConfiguration" nillable="true" type="q8:PanelLanguageCapability" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPanelLanguaageCapabilityResult" nillable="true" type="tns:GetPanelLanguaageCapabilityResult" />
+  <xs:complexType name="GetArmingModesResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ArmingModes" nillable="true" type="q9:ArmingModes" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetArmingModesResult" nillable="true" type="tns:GetArmingModesResult" />
+  <xs:complexType name="ImportZoneInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ZoneInfoList" nillable="true" type="q10:ArrayOfZoneInformation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportZoneInfoResult" nillable="true" type="tns:ImportZoneInfoResult" />
+  <xs:complexType name="GetZoneInformationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ZoneInformation" nillable="true" type="q11:ZoneInformation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetZoneInformationResult" nillable="true" type="tns:GetZoneInformationResult" />
+  <xs:complexType name="PanelFeatureSet2Result">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="PanelFeatureSet2Info" nillable="true" type="q12:PanelFeatureSet2Info" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PanelFeatureSet2Result" nillable="true" type="tns:PanelFeatureSet2Result" />
+  <xs:complexType name="TCServiceInstanceStatusResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsShutDownInProgress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OpenSessionCount" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TCServiceInstanceStatusResult" nillable="true" type="tns:TCServiceInstanceStatusResult" />
+  <xs:complexType name="SynchronizeSecurityPanelResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SynchronizeSecurityPanelResult" nillable="true" type="tns:SynchronizeSecurityPanelResult" />
+  <xs:complexType name="GetAutomationNetworkStatusResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="NetworkStatus" nillable="true" type="q13:AutomationNetworkStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAutomationNetworkStatusResult" nillable="true" type="tns:GetAutomationNetworkStatusResult" />
+  <xs:complexType name="GetNumberOfAutomationDeviceInStateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="DeviceInfo" nillable="true" type="q14:AutomationDeviceCountInfoList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetNumberOfAutomationDeviceInStateResult" nillable="true" type="tns:GetNumberOfAutomationDeviceInStateResult" />
+  <xs:complexType name="GetAutomationDeviceListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="DeviceInfo" nillable="true" type="q15:ArrayOfIndividualDeviceStateInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAutomationDeviceListResult" nillable="true" type="tns:GetAutomationDeviceListResult" />
+  <xs:complexType name="GetAllAutomationDeviceStateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="DeviceInfoList" nillable="true" type="q16:ArrayOfIndividualDeviceStateInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAllAutomationDeviceStateResult" nillable="true" type="tns:GetAllAutomationDeviceStateResult" />
+  <xs:complexType name="GetGeneralSwitchInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="SwitchConfiguration" nillable="true" type="q17:SwitchConfiguration" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetGeneralSwitchInfoResult" nillable="true" type="tns:GetGeneralSwitchInfoResult" />
+  <xs:complexType name="GetZWaveSwitchInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="SwitchInfo" nillable="true" type="q18:SwitchInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetZWaveSwitchInfoResult" nillable="true" type="tns:GetZWaveSwitchInfoResult" />
+  <xs:complexType name="GetSwitchCurrentStateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="SwitchStateInfo" nillable="true" type="q19:ArrayOfSwitchStateInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSwitchCurrentStateResult" nillable="true" type="tns:GetSwitchCurrentStateResult" />
+  <xs:complexType name="SetSwitchStateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetSwitchStateResult" nillable="true" type="tns:SetSwitchStateResult" />
+  <xs:complexType name="RenameSwitchResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RenameSwitchResult" nillable="true" type="tns:RenameSwitchResult" />
+  <xs:complexType name="GetGeneralLockInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="LockConfiguration" nillable="true" type="q20:LockConfiguration" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetGeneralLockInfoResult" nillable="true" type="tns:GetGeneralLockInfoResult" />
+  <xs:complexType name="GetIndividualLockInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="LockInfo" nillable="true" type="q21:LockInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetIndividualLockInfoResult" nillable="true" type="tns:GetIndividualLockInfoResult" />
+  <xs:complexType name="GetLockCurrentStateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="LockInfo" nillable="true" type="q22:ArrayOfLockInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetLockCurrentStateResult" nillable="true" type="tns:GetLockCurrentStateResult" />
+  <xs:complexType name="SetLockStateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetLockStateResult" nillable="true" type="tns:SetLockStateResult" />
+  <xs:complexType name="RenameLockResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RenameLockResult" nillable="true" type="tns:RenameLockResult" />
+  <xs:complexType name="GetGeneralThermostatInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ThermostatConfiguration" nillable="true" type="q23:ThermostatConfiguration" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetGeneralThermostatInfoResult" nillable="true" type="tns:GetGeneralThermostatInfoResult" />
+  <xs:complexType name="GetIndividualThermostatInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ThermostatInfo" nillable="true" type="q24:ThermostatInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetIndividualThermostatInfoResult" nillable="true" type="tns:GetIndividualThermostatInfoResult" />
+  <xs:complexType name="GetThermostatCurrentStateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ThermostatStateInfo" nillable="true" type="q25:ArrayOfThermostatStateInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetThermostatCurrentStateResult" nillable="true" type="tns:GetThermostatCurrentStateResult" />
+  <xs:complexType name="GetThermostatCurrentStateExResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ThermostatStateInfoEx" nillable="true" type="q26:ArrayOfThermostatStateExInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetThermostatCurrentStateExResult" nillable="true" type="tns:GetThermostatCurrentStateExResult" />
+  <xs:complexType name="SetThermostatStateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetThermostatStateResult" nillable="true" type="tns:SetThermostatStateResult" />
+  <xs:complexType name="RenameThermostatResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RenameThermostatResult" nillable="true" type="tns:RenameThermostatResult" />
+  <xs:complexType name="GetSceneConfigurationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="SceneConfiguration" nillable="true" type="q27:SceneConfiguration" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSceneConfigurationResult" nillable="true" type="tns:GetSceneConfigurationResult" />
+  <xs:complexType name="SetSceneResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SetSceneindex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetSceneResult" nillable="true" type="tns:SetSceneResult" />
+  <xs:complexType name="GetSceneResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="Scene" nillable="true" type="q28:Scene" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSceneResult" nillable="true" type="tns:GetSceneResult" />
+  <xs:complexType name="RunSceneResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RunSceneResult" nillable="true" type="tns:RunSceneResult" />
+  <xs:complexType name="DeleteSceneResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteSceneResult" nillable="true" type="tns:DeleteSceneResult" />
+  <xs:complexType name="GetSceneNameResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSceneNameResult" nillable="true" type="tns:GetSceneNameResult" />
+  <xs:complexType name="SetSceneNameResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetSceneNameResult" nillable="true" type="tns:SetSceneNameResult" />
+  <xs:complexType name="GetRuleConfigurationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="RuleConfiguration" nillable="true" type="q29:RuleConfiguration" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRuleConfigurationResult" nillable="true" type="tns:GetRuleConfigurationResult" />
+  <xs:complexType name="DeleteRuleResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteRuleResult" nillable="true" type="tns:DeleteRuleResult" />
+  <xs:complexType name="GetRuleInformationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="Rule" nillable="true" type="q30:EventAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRuleInformationResult" nillable="true" type="tns:GetRuleInformationResult" />
+  <xs:complexType name="SetRuleResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetRuleResult" nillable="true" type="tns:SetRuleResult" />
+  <xs:complexType name="GetRuleNameResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRuleNameResult" nillable="true" type="tns:GetRuleNameResult" />
+  <xs:complexType name="SetRuleNameResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetRuleNameResult" nillable="true" type="tns:SetRuleNameResult" />
+  <xs:complexType name="GetScheduleConfigurationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ScheduleConfiguration" nillable="true" type="q31:ScheduleConfiguration" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetScheduleConfigurationResult" nillable="true" type="tns:GetScheduleConfigurationResult" />
+  <xs:complexType name="DeleteScheduleResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteScheduleResult" nillable="true" type="tns:DeleteScheduleResult" />
+  <xs:complexType name="GetScheduleInformationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="Schedule" nillable="true" type="q32:Schedule" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetScheduleInformationResult" nillable="true" type="tns:GetScheduleInformationResult" />
+  <xs:complexType name="SetScheduleResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetScheduleResult" nillable="true" type="tns:SetScheduleResult" />
+  <xs:complexType name="GetTemperatureScheduleResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="TemperatureSchedule" nillable="true" type="q33:TemperatureSchedule" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetTemperatureScheduleResult" nillable="true" type="tns:GetTemperatureScheduleResult" />
+  <xs:complexType name="SetTemperatureScheduleResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetTemperatureScheduleResult" nillable="true" type="tns:SetTemperatureScheduleResult" />
+  <xs:complexType name="GetUserBySlotResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="PanelUser" nillable="true" type="q34:ArrayOfPanelUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetUserBySlotResult" nillable="true" type="tns:GetUserBySlotResult" />
+  <xs:complexType name="SaveUserResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="PanelUser" nillable="true" type="q35:PanelUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveUserResult" nillable="true" type="tns:SaveUserResult" />
+  <xs:complexType name="DeleteUserResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteUserResult" nillable="true" type="tns:DeleteUserResult" />
+  <xs:complexType name="GetUserSlotRangeResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="UserSlotRange" nillable="true" type="q36:SlotRange" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetUserSlotRangeResult" nillable="true" type="tns:GetUserSlotRangeResult" />
+  <xs:complexType name="GetAuthorityLevelConfigurationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WebMethodResults">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsDifferentialAuthoritySupported" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAuthorityLevelConfigurationResult" nillable="true" type="tns:GetAuthorityLevelConfigurationResult" />
+</xs:schema>

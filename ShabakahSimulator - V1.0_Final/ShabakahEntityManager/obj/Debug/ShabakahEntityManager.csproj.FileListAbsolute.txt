@@ -1,0 +1,16 @@
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahEntityManager\bin\Debug\ShabakahEntityManager.dll.config
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahEntityManager\bin\Debug\ShabakahEntityManager.dll
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahEntityManager\bin\Debug\ShabakahEntityManager.pdb
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahEntityManager\bin\Debug\LoggerComponent.dll
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahEntityManager\bin\Debug\LoggerComponent.pdb
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahEntityManager\obj\Debug\ShabakahEntityManager.csprojResolveAssemblyReference.cache
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahEntityManager\obj\Debug\ShabakahEntityManager.dll
+C:\Users\e843280\Productivity\ON_PROCESS\ShabakahSimulator\ShabakahSimulator\ShabakahSimulator\ShabakahEntityManager\obj\Debug\ShabakahEntityManager.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahEntityManager\bin\Debug\ShabakahEntityManager.dll.config
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahEntityManager\bin\Debug\ShabakahEntityManager.dll
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahEntityManager\bin\Debug\ShabakahEntityManager.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahEntityManager\bin\Debug\LoggerComponent.dll
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahEntityManager\bin\Debug\LoggerComponent.pdb
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahEntityManager\obj\Debug\ShabakahEntityManager.csprojResolveAssemblyReference.cache
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahEntityManager\obj\Debug\ShabakahEntityManager.dll
+\\IE3BLT35TKQ12\share\LynxSimulator\ShabakahSimulator - V1.0_Final\ShabakahEntityManager\obj\Debug\ShabakahEntityManager.pdb

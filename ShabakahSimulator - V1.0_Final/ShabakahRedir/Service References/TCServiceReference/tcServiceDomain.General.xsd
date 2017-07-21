@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/tcServiceDomain.General" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/tcServiceDomain.General" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ZoneProgrammingCapability">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CanBeExcluded" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ChimeProgrammable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Programmable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SmartRoomMembershipEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VoiceAnnunciationProgrammable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ZoneDescriptionEncoding" type="tns:eStringEncoding" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZoneProgrammingCapability" nillable="true" type="tns:ZoneProgrammingCapability" />
+  <xs:simpleType name="eStringEncoding">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ASCII" />
+      <xs:enumeration value="UnicodeUTF8">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Unicode2Byte">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Unicode3Byte">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eStringEncoding" nillable="true" type="tns:eStringEncoding" />
+</xs:schema>

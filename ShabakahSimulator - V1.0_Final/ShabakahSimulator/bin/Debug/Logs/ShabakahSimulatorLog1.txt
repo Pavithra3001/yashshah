@@ -1,0 +1,57 @@
+TRACE : 12_4_2017_18_24_42 : ShabakahRedir - Init - Start
+TRACE : 12_4_2017_18_24_42 : ShabakahRedir - Init - End
+TRACE : 12_4_2017_18_24_42 : ShabakahSimulatorMainForm - startRedir - Start
+TRACE : 12_4_2017_18_24_42 : ShabakahRedir - StartServer - Start
+TRACE : 12_4_2017_18_25_9 : ShabakahRedir - StartServer - End
+TRACE : 12_4_2017_18_25_9 : ShabakahRedir - ServerThreadStart - Start
+TRACE : 12_4_2017_18_25_9 : ShabakahSimulatorMainForm - startRedir - End
+TRACE : 12_4_2017_18_25_26 : ShabakahSimulatorMainForm - stopRedir - Start
+TRACE : 12_4_2017_18_25_26 : ShabakahRedir - StopRequest - Exception - Object reference not set to an instance of an object.
+TRACE : 12_4_2017_18_25_26 : ShabakahRedir - StopServer - Start
+TRACE : 12_4_2017_18_25_26 : ShabakahRedir - ServerThreadStart - SocketException - A blocking operation was interrupted by a call to WSACancelBlockingCall
+TRACE : 12_4_2017_18_25_26 : ShabakahRedir - ServerThreadStart - End
+TRACE : 12_4_2017_18_25_27 : ShabakahRedir - StopAllSocketListers - Start
+TRACE : 12_4_2017_18_25_27 : ShabakahRedir - StopAllSocketListers - End
+TRACE : 12_4_2017_18_25_27 : ShabakahRedir - StopServer - End
+TRACE : 12_4_2017_18_25_28 : ShabakahSimulatorMainForm - stopRedir - End
+TRACE : 12_4_2017_18_25_31 : ShabakahRedir - Init - Start
+TRACE : 12_4_2017_18_25_31 : ShabakahRedir - Init - End
+TRACE : 12_4_2017_18_25_31 : ShabakahSimulatorMainForm - startRedir - Start
+TRACE : 12_4_2017_18_25_31 : ShabakahRedir - StartServer - Start
+TRACE : 12_4_2017_18_25_34 : ShabakahRedir - ServerThreadStart - Start
+TRACE : 12_4_2017_18_25_34 : ShabakahRedir - StartServer - End
+TRACE : 12_4_2017_18_25_35 : ShabakahSimulatorMainForm - startRedir - End
+TRACE : 12_4_2017_18_25_42 : ShabakahSimulatorMainForm - stopRedir - Start
+TRACE : 12_4_2017_18_25_42 : ShabakahRedir - StopRequest - Exception - Object reference not set to an instance of an object.
+TRACE : 12_4_2017_18_25_42 : ShabakahRedir - StopServer - Start
+TRACE : 12_4_2017_18_25_42 : ShabakahRedir - ServerThreadStart - SocketException - A blocking operation was interrupted by a call to WSACancelBlockingCall
+TRACE : 12_4_2017_18_25_42 : ShabakahRedir - ServerThreadStart - End
+TRACE : 12_4_2017_18_25_43 : ShabakahRedir - StopAllSocketListers - Start
+TRACE : 12_4_2017_18_25_43 : ShabakahRedir - StopAllSocketListers - End
+TRACE : 12_4_2017_18_25_43 : ShabakahRedir - StopServer - End
+TRACE : 12_4_2017_18_25_43 : ShabakahSimulatorMainForm - stopRedir - End
+TRACE : 12_4_2017_18_25_58 : ShabakahRedir - Init - Start
+TRACE : 12_4_2017_18_25_58 : ShabakahRedir - Init - End
+TRACE : 12_4_2017_18_25_58 : ShabakahSimulatorMainForm - startRedir - Start
+TRACE : 12_4_2017_18_25_58 : ShabakahRedir - StartServer - Start
+TRACE : 12_4_2017_18_26_0 : ShabakahRedir - ServerThreadStart - Start
+TRACE : 12_4_2017_18_26_2 : ShabakahRedir - StartServer - End
+TRACE : 12_4_2017_18_26_2 : ShabakahSimulatorMainForm - startRedir - End
+TRACE : 12_4_2017_18_26_14 : ShabakahSimulatorMainForm - stopRedir - Start
+TRACE : 12_4_2017_18_26_14 : ShabakahRedir - StopRequest - Exception - Object reference not set to an instance of an object.
+TRACE : 12_4_2017_18_26_14 : ShabakahRedir - StopServer - Start
+TRACE : 12_4_2017_18_26_14 : ShabakahRedir - ServerThreadStart - SocketException - A blocking operation was interrupted by a call to WSACancelBlockingCall
+TRACE : 12_4_2017_18_26_14 : ShabakahRedir - ServerThreadStart - End
+TRACE : 12_4_2017_18_26_15 : ShabakahRedir - StopAllSocketListers - Start
+TRACE : 12_4_2017_18_26_15 : ShabakahRedir - StopAllSocketListers - End
+TRACE : 12_4_2017_18_26_15 : ShabakahRedir - StopServer - End
+TRACE : 12_4_2017_18_26_15 : ShabakahSimulatorMainForm - stopRedir - End
+TRACE : 12_4_2017_18_26_21 : ShabakahSimulatorMainForm - stopRedir - Start
+CRITICAL : 12_4_2017_18_26_21 : ShabakahSimulatorMainForm - StopRequest - Exception - Object reference not set to an instance of an object.
+TRACE : 12_4_2017_18_26_21 : ShabakahSimulatorMainForm - stopRedir - Exception - Object reference not set to an instance of an object.
+TRACE : 12_4_2017_18_26_21 : ShabakahRedir - StopServer - Start
+TRACE : 12_4_2017_18_26_21 : ShabakahRedir - StopServer - End
+TRACE : 12_4_2017_18_26_21 : ShabakahRedir - StopServer - Start
+TRACE : 12_4_2017_18_26_21 : ShabakahRedir - StopServer - End
+TRACE : 12_4_2017_18_26_22 : ShabakahRedir - StopServer - Start
+TRACE : 12_4_2017_18_26_22 : ShabakahRedir - StopServer - End

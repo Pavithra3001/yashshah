@@ -1,0 +1,1890 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcServiceDomain" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.SmartAction" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/TCService.SharedDomain.SmartAction" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/tcWeb" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="GetUserAdminAuthorityLevel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserAdminAuthorityLevelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetUserAdminAuthorityLevelResult" nillable="true" type="q1:GetUserAdminAuthorityLevelResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfigurationSequenceNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfigurationSequenceNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetUserConfigurationSequenceNumberResult" nillable="true" type="q2:UserConfigurationSequenceNumberResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizePanelUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="UserManagementRequestInfo" nillable="true" type="q3:TC2UserManagementRequestInfo" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizePanelUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SynchronizePanelUserResult" nillable="true" type="q4:SynchronizePanelUserResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableUserSlots">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableUserSlotsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetAvailableUserSlotsResult" nillable="true" type="q5:GetAvailableUserSlotsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAPIVersion">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAPIVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAPIVersionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmartActionConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmartActionConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.SmartAction" minOccurs="0" name="GetSmartActionConfigurationResult" nillable="true" type="q6:SmartActionConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEditSmartAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/TCService.SharedDomain.SmartAction" minOccurs="0" name="smartAction" nillable="true" type="q7:SmartAction" />
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEditSmartActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="AddEditSmartActionResult" nillable="true" type="q8:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSmartActionName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="smartActionNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSmartActionNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetSmartActionNameResult" nillable="true" type="q9:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmartActionName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="smartActionNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmartActionNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.SmartAction" minOccurs="0" name="GetSmartActionNameResult" nillable="true" type="q10:SmartActionNameResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSmartActionState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="stateChanges" nillable="true" type="q11:ArrayOfKeyValueOfinteSmartActionStateIEa5VARa" />
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSmartActionStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetSmartActionStateResult" nillable="true" type="q12:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmartActionState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="smartActionNumbers" nillable="true" type="q13:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmartActionStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.SmartAction" minOccurs="0" name="GetSmartActionStateResult" nillable="true" type="q14:SmartActionStateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSmartAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="smartActionNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSmartActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="DeleteSmartActionResult" nillable="true" type="q15:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteSmartAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="smartActionNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteSmartActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="ExecuteSmartActionResult" nillable="true" type="q16:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmartAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="smartActionNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmartActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.SmartAction" minOccurs="0" name="GetSmartActionResult" nillable="true" type="q17:SmartActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSmartActionEditingOnPanel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="enable" type="xs:boolean" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSmartActionEditingOnPanelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetSmartActionEditingOnPanelResult" nillable="true" type="q18:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCloudDeviceToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" minOccurs="0" name="cloudDeviceType" type="q19:eCloudDeviceType" />
+        <xs:element minOccurs="0" name="appToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="authToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCloudDeviceTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="AddCloudDeviceTokenResult" nillable="true" type="q20:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthorizeCloudDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" minOccurs="0" name="cloudDeviceType" type="q21:eCloudDeviceType" />
+        <xs:element minOccurs="0" name="locId" type="xs:int" />
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="deviceIds" nillable="true" type="q22:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthorizeCloudDeviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="AuthorizeCloudDeviceResult" nillable="true" type="q23:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RevokeCloudDeviceToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" minOccurs="0" name="cloudDeviceType" type="q24:eCloudDeviceType" />
+        <xs:element minOccurs="0" name="appToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="authToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RevokeCloudDeviceTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="RevokeCloudDeviceTokenResult" nillable="true" type="q25:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeCloudDeviceUrl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeCloudDeviceUrlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="ChangeCloudDeviceUrlResult" nillable="true" type="q26:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBatteryLevel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="zones" nillable="true" type="q27:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBatteryLevelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" minOccurs="0" name="GetBatteryLevelResult" nillable="true" type="q28:GetDeviceLevelResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBatteryLevelByZoneRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="zoneRangeStart" type="xs:int" />
+        <xs:element minOccurs="0" name="zoneRangeEnd" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBatteryLevelByZoneRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" minOccurs="0" name="GetBatteryLevelByZoneRangeResult" nillable="true" type="q29:GetDeviceLevelResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSignalStrengthLevel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="zones" nillable="true" type="q30:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSignalStrengthLevelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" minOccurs="0" name="GetSignalStrengthLevelResult" nillable="true" type="q31:GetDeviceLevelResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSignalStrengthLevelByZoneRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="zoneRangeStart" type="xs:int" />
+        <xs:element minOccurs="0" name="zoneRangeEnd" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSignalStrengthLevelByZoneRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" minOccurs="0" name="GetSignalStrengthLevelByZoneRangeResult" nillable="true" type="q32:GetDeviceLevelResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZoneProgrammingCapability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZoneProgrammingCapabilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" minOccurs="0" name="GetZoneProgrammingCapabilityResult" nillable="true" type="q33:GetZoneProgrammingCapabilityResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntryDelays">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntryDelaysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" minOccurs="0" name="GetEntryDelaysResult" nillable="true" type="q34:GetEntryDelaysResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPanelSoftwareVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPanelSoftwareVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" minOccurs="0" name="GetPanelSoftwareVersionResult" nillable="true" type="q35:GetPanelSoftwareVersionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomArmConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomArmConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" minOccurs="0" name="GetCustomArmConfigResult" nillable="true" type="q36:GetCustomArmConfigResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCustomArmConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" minOccurs="0" name="armMode" type="q37:eArmMode" />
+        <xs:element minOccurs="0" name="entryDelay" type="xs:boolean" />
+        <xs:element xmlns:q38="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="byPassZones" nillable="true" type="q38:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCustomArmConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetCustomArmConfigResult" nillable="true" type="q39:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArmSystem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="area" type="xs:int" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" minOccurs="0" name="armtype" type="q40:eArmType" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" minOccurs="0" name="armAwayHome" nillable="true" type="q41:eArmSubState" />
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" minOccurs="0" name="armStay1or2" nillable="true" type="q42:eArmSubStateModifier" />
+        <xs:element minOccurs="0" name="entryDelay" nillable="true" type="xs:boolean" />
+        <xs:element xmlns:q43="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="zonesToBypass" nillable="true" type="q43:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArmSystemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="ArmSystemResult" nillable="true" type="q44:ArmSystemResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisarmSystem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="area" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisarmSystemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="DisarmSystemResult" nillable="true" type="q45:DisarmSystemResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZonesListInState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="PartitionNumber" type="xs:int" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" minOccurs="0" name="ListIdentifierId" type="q46:eZoneStatusIdentifier" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZonesListInStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetZonesListInStateResult" nillable="true" type="q47:GetZonesListInStateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZoneListInStateWithConsoleInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="PartitionNumber" type="xs:int" />
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" minOccurs="0" name="ListIdentifierId" type="q48:eZoneStatusIdentifier" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZoneListInStateWithConsoleInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetZoneListInStateWithConsoleInfoResult" nillable="true" type="q49:GetZoneListInStateWithConsoleInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaStatusObject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="Area" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaStatusObjectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/tcWeb" minOccurs="0" name="GetAreaStatusObjectResult" nillable="true" type="q50:PartitionState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaStat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="Area" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaStatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAreaStatResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Bypass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="Zone" type="xs:int" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BypassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BypassResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpenSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ECP" type="xs:int" />
+        <xs:element minOccurs="0" name="Devtype" type="xs:int" />
+        <xs:element minOccurs="0" name="Alarmnetuser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpenSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OpenSessionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsConnected">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsConnectedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsConnectedResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConnections">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConnectionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetConnectionsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogFileLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogFileLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLogFileLocationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Authenticate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthenticateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadConsoleDisplay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadConsoleDisplayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="ReadConsoleDisplayResult" nillable="true" type="q51:ReadConsoleDisplayResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="Aarmnetuser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseSessionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PanelToCommitChanges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PanelToCommitChangesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="PanelToCommitChangesResult" nillable="true" type="q52:PanelToCommitInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupportedZwaveFeatures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupportedZwaveFeaturesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetSupportedZwaveFeaturesResult" nillable="true" type="q53:GetSupportedZwaveFeaturesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZwaveConfigSequenceNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZwaveConfigSequenceNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetZwaveConfigSequenceNumberResult" nillable="true" type="q54:GetZwaveConfigSequenceNumberResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPanelLanguageConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPanelLanguageConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetPanelLanguageConfigurationResult" nillable="true" type="q55:GetPanelLanguaageCapabilityResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArmingModes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArmingModesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetArmingModesResult" nillable="true" type="q56:GetArmingModesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberOfPartitions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberOfPartitionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNumberOfPartitionsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstaller">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstallerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInstallerResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHardwareName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHardwareNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHardwareNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVersionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSequenceNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSequenceNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSequenceNumberResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCommandInProgressToNone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCommandInProgressToNoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetCommandInProgressToNoneResult" nillable="true" type="q57:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommandInProgress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommandInProgressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetCommandInProgressResult" nillable="true" type="q58:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberOfZones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="PartitionIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberOfZonesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNumberOfZonesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHomeArea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHomeAreaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHomeAreaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q59="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="PressedKey" type="q59:char" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendKeyResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMacro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="macroSeq" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMacroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMacroResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportZoneInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportZoneInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="ImportZoneInfoResult" nillable="true" type="q60:ImportZoneInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZoneUnicode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="PartitionIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="ZoneIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZoneUnicodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetZoneUnicodeResult" nillable="true" type="q61:GetZoneInformationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupportedChimes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupportedChimesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData.General" minOccurs="0" name="GetSupportedChimesResult" nillable="true" type="q62:GetSupportedChimesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastCommandState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastCommandStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLastCommandStateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPanic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="area" type="xs:int" />
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" minOccurs="0" name="panicTypesToSend" nillable="true" type="q63:ArrayOfePanicType" />
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPanicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SendPanicResult" nillable="true" type="q64:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPanelFeatureSet2Info">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPanelFeatureSet2InfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetPanelFeatureSet2InfoResult" nillable="true" type="q65:PanelFeatureSet2Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentTCServiceInstanceStatus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentTCServiceInstanceStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetCurrentTCServiceInstanceStatusResult" nillable="true" type="q66:TCServiceInstanceStatusResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartUpCurrentTCServiceInstance">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartUpCurrentTCServiceInstanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="StartUpCurrentTCServiceInstanceResult" nillable="true" type="q67:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShutDownCurrentTCServiceInstance">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShutDownCurrentTCServiceInstanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="ShutDownCurrentTCServiceInstanceResult" nillable="true" type="q68:WebMethodResults" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeSecurityPanel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="InstallerCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeSecurityPanelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SynchronizeSecurityPanelResult" nillable="true" type="q69:SynchronizeSecurityPanelResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomationNetworkStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomationNetworkStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetAutomationNetworkStatusResult" nillable="true" type="q70:GetAutomationNetworkStatusResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberOfAutomationDevicesInState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="DeviceState" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberOfAutomationDevicesInStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetNumberOfAutomationDevicesInStateResult" nillable="true" type="q71:GetNumberOfAutomationDeviceInStateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomationDevicesListInState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="DeviceState" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutomationDevicesListInStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetAutomationDevicesListInStateResult" nillable="true" type="q72:GetAutomationDeviceListResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAutomationDeviceState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="StartIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="EndIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAutomationDeviceStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetAllAutomationDeviceStateResult" nillable="true" type="q73:GetAllAutomationDeviceStateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralSwitchInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralSwitchInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetGeneralSwitchInfoResult" nillable="true" type="q74:GetGeneralSwitchInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndividualSwitchInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="SwitchInstance" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndividualSwitchInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetIndividualSwitchInfoResult" nillable="true" type="q75:GetZWaveSwitchInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSwitchCurrentState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q76="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SwitchIndexList" nillable="true" type="q76:ArrayOfint" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSwitchCurrentStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetSwitchCurrentStateResult" nillable="true" type="q77:GetSwitchCurrentStateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSwitchState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="SwitchStateInfo" nillable="true" type="q78:ArrayOfSwitchStateInfo" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSwitchStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetSwitchStateResult" nillable="true" type="q79:SetSwitchStateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameSwitch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SwitchIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="SwitchName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameSwitchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="RenameSwitchResult" nillable="true" type="q80:RenameSwitchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralLockInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralLockInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetGeneralLockInfoResult" nillable="true" type="q81:GetGeneralLockInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndividualLockInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="LockInstance" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndividualLockInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetIndividualLockInfoResult" nillable="true" type="q82:GetIndividualLockInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockCurrentState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q83="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LockIndexList" nillable="true" type="q83:ArrayOfint" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockCurrentStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetLockCurrentStateResult" nillable="true" type="q84:GetLockCurrentStateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLockState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="LockStateInfo" nillable="true" type="q85:ArrayOfLockStateInfo" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLockStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetLockStateResult" nillable="true" type="q86:SetLockStateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LockIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="LockName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameLockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="RenameLockResult" nillable="true" type="q87:RenameLockResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralThermostatInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralThermostatInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetGeneralThermostatInfoResult" nillable="true" type="q88:GetGeneralThermostatInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndividualThermostatInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="ThermostatInstance" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndividualThermostatInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetIndividualThermostatInfoResult" nillable="true" type="q89:GetIndividualThermostatInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThermostatCurrentState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q90="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ThermostatIndexList" nillable="true" type="q90:ArrayOfint" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThermostatCurrentStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetThermostatCurrentStateResult" nillable="true" type="q91:GetThermostatCurrentStateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThermostatCurrentStateEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element xmlns:q92="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ThermostatIndexList" nillable="true" type="q92:ArrayOfint" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThermostatCurrentStateExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetThermostatCurrentStateExResult" nillable="true" type="q93:GetThermostatCurrentStateExResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetThermostatState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ThermostatInformation" nillable="true" type="q94:ArrayOfThermostat" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetThermostatStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetThermostatStateResult" nillable="true" type="q95:SetThermostatStateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameThermostat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ThermostatIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="ThermostatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenameThermostatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="RenameThermostatResult" nillable="true" type="q96:RenameThermostatResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSceneConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSceneConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetSceneConfigurationResult" nillable="true" type="q97:GetSceneConfigurationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetScene">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="SceneInformation" nillable="true" type="q98:Scene" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSceneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetSceneResult" nillable="true" type="q99:SetSceneResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScene">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="SceneInstance" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSceneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetSceneResult" nillable="true" type="q100:GetSceneResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunScene">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SceneIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunSceneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="RunSceneResult" nillable="true" type="q101:RunSceneResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteScene">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SceneIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSceneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="DeleteSceneResult" nillable="true" type="q102:DeleteSceneResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSceneName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="SceneIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSceneNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetSceneNameResult" nillable="true" type="q103:GetSceneNameResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSceneName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SceneIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="SceneName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSceneNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetSceneNameResult" nillable="true" type="q104:SetSceneNameResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetRuleConfigurationResult" nillable="true" type="q105:GetRuleConfigurationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RuleIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="DeleteRuleResult" nillable="true" type="q106:DeleteRuleResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="RuleInstance" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetRuleInformationResult" nillable="true" type="q107:GetRuleInformationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="RuleInformation" nillable="true" type="q108:EventAction" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetRuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetRuleResult" nillable="true" type="q109:SetRuleResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="RuleIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetRuleNameResult" nillable="true" type="q110:GetRuleNameResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetRuleName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RuleIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="RuleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetRuleNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetRuleNameResult" nillable="true" type="q111:SetRuleNameResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduleConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduleConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetScheduleConfigurationResult" nillable="true" type="q112:GetScheduleConfigurationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ScheduleIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="DeleteScheduleResult" nillable="true" type="q113:DeleteScheduleResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduleInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="ScheduleInstance" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduleInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetScheduleInformationResult" nillable="true" type="q114:GetScheduleInformationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="ScheduleInformation" nillable="true" type="q115:Schedule" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetScheduleResult" nillable="true" type="q116:SetScheduleResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemperatureSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="ThermostatIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemperatureScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetTemperatureScheduleResult" nillable="true" type="q117:GetTemperatureScheduleResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetTemperatureSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="TemperatureSchedule" nillable="true" type="q118:TemperatureSchedule" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetTemperatureScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SetTemperatureScheduleResult" nillable="true" type="q119:SetTemperatureScheduleResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserBySlotNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SlotNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="PartitionNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserBySlotNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetUserBySlotNumberResult" nillable="true" type="q120:GetUserBySlotResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUserInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="PanelUser" nillable="true" type="q121:PanelUser" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUserInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SaveUserInformationResult" nillable="true" type="q122:SaveUserResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUserInformationEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/tcServiceDomain" minOccurs="0" name="PanelUser" nillable="true" type="q123:PanelUser" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUserInformationExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="SaveUserInformationExResult" nillable="true" type="q124:SaveUserResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserBySlotNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SlotNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserBySlotNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="DeleteUserBySlotNumberResult" nillable="true" type="q125:DeleteUserResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserSlotRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AuthorizingCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserSlotRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetUserSlotRangeResult" nillable="true" type="q126:GetUserSlotRangeResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorityLevelConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+        <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorityLevelConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/tcWeb.WebMethodResultsData" minOccurs="0" name="GetAuthorityLevelConfigurationResult" nillable="true" type="q127:GetAuthorityLevelConfigurationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TCService.SharedDomain.SmartAction" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TCService.SharedDomain.SmartAction" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="SmartAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuiltInCameraSubAction" nillable="true" type="tns:CameraSubAction" />
+      <xs:element minOccurs="0" name="LockSubActions" nillable="true" type="tns:ArrayOfLockSubAction" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Schedule" nillable="true" type="tns:SmartActionSchedule" />
+      <xs:element minOccurs="0" name="SecuritySubActions" nillable="true" type="tns:ArrayOfSecuritySubAction" />
+      <xs:element minOccurs="0" name="SmartActionNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="State" type="tns:eSmartActionState" />
+      <xs:element minOccurs="0" name="SwitchSubActions" nillable="true" type="tns:ArrayOfSwitchSubAction" />
+      <xs:element minOccurs="0" name="ThermostatSubActions" nillable="true" type="tns:ArrayOfThermostatSubAction" />
+      <xs:element minOccurs="0" name="TriggerEvent" nillable="true" type="tns:SmartActionTriggerEvent" />
+      <xs:element minOccurs="0" name="TriggerType" type="tns:eTriggerType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SmartAction" nillable="true" type="tns:SmartAction" />
+  <xs:complexType name="CameraSubAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Action" type="tns:eCameraAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CameraSubAction" nillable="true" type="tns:CameraSubAction" />
+  <xs:simpleType name="eCameraAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Snapshot" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eCameraAction" nillable="true" type="tns:eCameraAction" />
+  <xs:complexType name="ArrayOfLockSubAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LockSubAction" nillable="true" type="tns:LockSubAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLockSubAction" nillable="true" type="tns:ArrayOfLockSubAction" />
+  <xs:complexType name="LockSubAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LockAction" type="tns:eLockAction" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LockIDs" nillable="true" type="q1:ArrayOflong" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LockSubAction" nillable="true" type="tns:LockSubAction" />
+  <xs:simpleType name="eLockAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UnlockAll" />
+      <xs:enumeration value="LockAll" />
+      <xs:enumeration value="UnlockSome" />
+      <xs:enumeration value="LockSome" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eLockAction" nillable="true" type="tns:eLockAction" />
+  <xs:complexType name="SmartActionSchedule">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DayOfMonth" nillable="true" type="q2:ArrayOfint" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DayOfWeek" nillable="true" type="q3:ArrayOfint" />
+      <xs:element minOccurs="0" name="Frequency" type="tns:eScheduleFrequency" />
+      <xs:element minOccurs="0" name="RandomMinutesAfter" type="xs:int" />
+      <xs:element minOccurs="0" name="RandomMinutesBefore" type="xs:int" />
+      <xs:element minOccurs="0" name="ScheduleDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SmartActionScheduleID" type="xs:long" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sunrise" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sunset" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SmartActionSchedule" nillable="true" type="tns:SmartActionSchedule" />
+  <xs:simpleType name="eScheduleFrequency">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Once">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Daily">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Weekday">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Weekly">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Monthly">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sunrise">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sunset">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eScheduleFrequency" nillable="true" type="tns:eScheduleFrequency" />
+  <xs:complexType name="ArrayOfSecuritySubAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SecuritySubAction" nillable="true" type="tns:SecuritySubAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSecuritySubAction" nillable="true" type="tns:ArrayOfSecuritySubAction" />
+  <xs:complexType name="SecuritySubAction">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ByPassZones" nillable="true" type="q4:ArrayOfint" />
+      <xs:element minOccurs="0" name="State" type="tns:eSecurityState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecuritySubAction" nillable="true" type="tns:SecuritySubAction" />
+  <xs:simpleType name="eSecurityState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Disarm" />
+      <xs:enumeration value="ArmAway" />
+      <xs:enumeration value="ArmStay" />
+      <xs:enumeration value="ByPass" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eSecurityState" nillable="true" type="tns:eSecurityState" />
+  <xs:simpleType name="eSmartActionState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Disabled" />
+      <xs:enumeration value="Enabled" />
+      <xs:enumeration value="Paused" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eSmartActionState" nillable="true" type="tns:eSmartActionState" />
+  <xs:complexType name="ArrayOfSwitchSubAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SwitchSubAction" nillable="true" type="tns:SwitchSubAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSwitchSubAction" nillable="true" type="tns:ArrayOfSwitchSubAction" />
+  <xs:complexType name="SwitchSubAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Level" type="xs:int" />
+      <xs:element minOccurs="0" name="SwitchAction" type="tns:eSwitchAction" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SwitchIDs" nillable="true" type="q5:ArrayOflong" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SwitchSubAction" nillable="true" type="tns:SwitchSubAction" />
+  <xs:simpleType name="eSwitchAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AllOff" />
+      <xs:enumeration value="AllOn" />
+      <xs:enumeration value="SomeOff" />
+      <xs:enumeration value="SomeOn" />
+      <xs:enumeration value="AllDim" />
+      <xs:enumeration value="SomeDim" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eSwitchAction" nillable="true" type="tns:eSwitchAction" />
+  <xs:complexType name="ArrayOfThermostatSubAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ThermostatSubAction" nillable="true" type="tns:ThermostatSubAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThermostatSubAction" nillable="true" type="tns:ArrayOfThermostatSubAction" />
+  <xs:complexType name="ThermostatSubAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CoolSetPoint" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FanMode" type="tns:eFanMode" />
+      <xs:element minOccurs="0" name="HeatSetPoint" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Mode" type="tns:eThermostatMode" />
+      <xs:element minOccurs="0" name="ThermostatID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThermostatSubAction" nillable="true" type="tns:ThermostatSubAction" />
+  <xs:simpleType name="eFanMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Auto" />
+      <xs:enumeration value="Low" />
+      <xs:enumeration value="AutoHigh" />
+      <xs:enumeration value="High" />
+      <xs:enumeration value="AutoMedium" />
+      <xs:enumeration value="Medium" />
+      <xs:enumeration value="Circulation" />
+      <xs:enumeration value="HumidityCirculation" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eFanMode" nillable="true" type="tns:eFanMode" />
+  <xs:simpleType name="eThermostatMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Off" />
+      <xs:enumeration value="Auto" />
+      <xs:enumeration value="Heat" />
+      <xs:enumeration value="Cool" />
+      <xs:enumeration value="EnergySaveHeat" />
+      <xs:enumeration value="EnergySaveCool" />
+      <xs:enumeration value="EmergencyHeat" />
+      <xs:enumeration value="Resume" />
+      <xs:enumeration value="Setback" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eThermostatMode" nillable="true" type="tns:eThermostatMode" />
+  <xs:complexType name="SmartActionTriggerEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceState" nillable="true" type="tns:eDeviceState" />
+      <xs:element minOccurs="0" name="FaultZoneType" type="tns:eZoneType" />
+      <xs:element minOccurs="0" name="RestoreZoneType" type="tns:eZoneType" />
+      <xs:element minOccurs="0" name="SystemOperation" type="tns:eSystemOperation" />
+      <xs:element minOccurs="0" name="TriggerEventType" type="tns:eTriggerEventType" />
+      <xs:element minOccurs="0" name="ZoneNumberTriggerZoneOrDeviceID" type="xs:int" />
+      <xs:element minOccurs="0" name="ZoneOperation" type="tns:eZoneOperation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SmartActionTriggerEvent" nillable="true" type="tns:SmartActionTriggerEvent" />
+  <xs:simpleType name="eDeviceState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Off_Unlock" />
+      <xs:enumeration value="On_Lock" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eDeviceState" nillable="true" type="tns:eDeviceState" />
+  <xs:simpleType name="eZoneType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Disabled" />
+      <xs:enumeration value="EntryExit1" />
+      <xs:enumeration value="EntryExit2" />
+      <xs:enumeration value="Perimeter" />
+      <xs:enumeration value="InteriorFollower" />
+      <xs:enumeration value="TroubleDayAlarmNight" />
+      <xs:enumeration value="SilentAlarm_24Hour" />
+      <xs:enumeration value="AudibleAlarm_24Hour" />
+      <xs:enumeration value="Auxiliary_24Hour" />
+      <xs:enumeration value="FireNoVerification" />
+      <xs:enumeration value="InteriorDelay" />
+      <xs:enumeration value="Monitor_24Hour" />
+      <xs:enumeration value="RemotePS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="COAlarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Medical_24Hour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FireWithVerification">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FireWaterFlow">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FireSupervisory">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Trouble_24Hour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ArmStay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ArmAway">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Disarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoAlarmResponse">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Silent">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="JiffyLube_24Hour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AccessPoint">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MainLogicBoardSupervision">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">28</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MomentaryExit">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GarageDoor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">50</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Keyswitch">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">77</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AAVMonitor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">81</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ResiMonitor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">85</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ResiResponse">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">86</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoConfirmResiMonitor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">87</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoConfirmResiResponse">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">88</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eZoneType" nillable="true" type="tns:eZoneType" />
+  <xs:simpleType name="eSystemOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotUsed" />
+      <xs:enumeration value="ArmStay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ArmAway">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Disarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EndExitDelay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="StartEntryDelay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BurglaryAlarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BellTimeout">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">36</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Chime">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">38</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Kissoff">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">52</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FireAlarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">39</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bypass">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SystemLowBattery">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">42</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CommFailure">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">43</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DuressAlarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">58</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ArmNightStay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">59</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eSystemOperation" nillable="true" type="tns:eSystemOperation" />
+  <xs:simpleType name="eTriggerEventType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ZoneType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SystemOperation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SystemAction">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ZoneNumber">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eTriggerEventType" nillable="true" type="tns:eTriggerEventType" />
+  <xs:simpleType name="eZoneOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotUsed" />
+      <xs:enumeration value="Fault" />
+      <xs:enumeration value="Trouble" />
+      <xs:enumeration value="Alarm" />
+      <xs:enumeration value="Lights" />
+      <xs:enumeration value="Locks" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eZoneOperation" nillable="true" type="tns:eZoneOperation" />
+  <xs:simpleType name="eTriggerType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Anytime" />
+      <xs:enumeration value="EventTriggered" />
+      <xs:enumeration value="TimeTriggered" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eTriggerType" nillable="true" type="tns:eTriggerType" />
+</xs:schema>

@@ -1,0 +1,94 @@
+TRACE : 17_2_2016_13_16_24 : ShabakahSimulatorMainForm - configureToolStripMenuItem_Click - Start
+TRACE : 17_2_2016_13_16_32 : ShabakahSimulatorMainForm - ConfigureDevicesCSV - Start
+TRACE : 17_2_2016_13_16_32 : ShabakahSimulatorMainForm - ConfigureDevicesCSV - End
+TRACE : 17_2_2016_13_16_32 : ShabakahSimulatorMainForm - PopulateDetailedReportsTable - Start
+TRACE : 17_2_2016_13_16_32 : ShabakahSimulatorMainForm - PopulateDetailedReportsTable - End
+TRACE : 17_2_2016_13_16_32 : ShabakahSimulatorMainForm - configureToolStripMenuItem_Click - End
+TRACE : 17_2_2016_13_16_46 : ShabakahRedir - Init - Start
+TRACE : 17_2_2016_13_16_46 : ShabakahRedir - Init - End
+TRACE : 17_2_2016_13_16_46 : ShabakahSimulatorMainForm - InitializePanelCounters - Start
+TRACE : 17_2_2016_13_16_46 : ShabakahSimulatorMainForm - InitializePanelCounters - End
+TRACE : 17_2_2016_13_16_46 : ShabakahSimulatorMainForm - startRedir - Start
+TRACE : 17_2_2016_13_16_46 : ShabakahRedir - StartServer - Start
+TRACE : 17_2_2016_13_16_47 : ShabakahRedir - StartServer - End
+TRACE : 17_2_2016_13_16_47 : ShabakahRedir - ServerThreadStart - Start
+TRACE : 17_2_2016_13_16_47 : ShabakahSimulatorMainForm - startRedir - End
+TRACE : 17_2_2016_13_16_53 : [00D02D3ba600]PanelServices - OpenSession - Start
+TRACE : 17_2_2016_13_16_53 : [00D02D3ba600]PanelServices - OpenSession - Sending
+TRACE : 17_2_2016_13_16_54 : ShabakahRedir - ServerThreadStart - ClientSocket After AcceptSocket - 10.171.146.40:58417
+TRACE : 17_2_2016_13_16_54 : RedirSocketListener - StartSocketListener - Start
+TRACE : 17_2_2016_13_16_54 : RedirSocketListener - StartSocketListener - End
+TRACE : 17_2_2016_13_16_54 : RedirSocketListener - SocketListenerThreadStart - Start
+TRACE : 17_2_2016_13_16_54 : RedirSocketListener - SocketListenerThreadStart - New Session Created. request Received
+TRACE : 17_2_2016_13_16_54 : RedirSocketListener - ClientConnected - Start
+TRACE : 17_2_2016_13_16_54 : [00D02D3ba600]PanelServices - OpenSession - Success
+TRACE : 17_2_2016_13_16_54 : [00D02D3ba600]PanelServices - OpenSession - End
+TRACE : 17_2_2016_13_16_55 : [00D02D3BA600] MockPanel - DoSenReceiveModified - Start 
+TRACE : 17_2_2016_13_16_55 : [00D02D3BA600] MockPanel - StartSendModified - Start
+TRACE : 17_2_2016_13_16_55 : [00D02D3BA600] MockPanel - StartReceiveModified - Start
+TRACE : 17_2_2016_13_16_56 : [00D02D3BA600] MockPanel - StartSend - Start
+TRACE : 17_2_2016_13_16_56 : [00D02D3BA600] MockPanel - StartReceive - Start
+TRACE : 17_2_2016_13_16_56 : [00D02D3BA600] MockPanel - After SocketReceive. 
+TRACE : 17_2_2016_13_16_56 : [00D02D3BA600] MockPanel - ProcessReceive - Start
+TRACE : 17_2_2016_13_16_56 : [00D02D3BA600] MockPanel - HandleRequest - Start 
+TRACE : 17_2_2016_13_16_56 : [00D02D3BA600] MockPanel - HandleRequest - End 
+TRACE : 17_2_2016_13_16_56 : [00D02D3BA600] MockPanel - ProcessReceive - End
+TRACE : 17_2_2016_13_16_56 : [00D02D3BA600] MockPanel - StartReceive - End
+TRACE : 17_2_2016_13_16_56 : [00D02D3BA600] MockPanel - StartReceive - Start
+TRACE : 17_2_2016_13_17_24 : [00D02D3ba600]PanelServices - SendArmRequest - Start
+TRACE : 17_2_2016_13_17_24 : [00D02D3ba600]PanelServices - SendArmRequest - Sending
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - After SocketReceive. 
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - ProcessReceive - Start
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - HandleRequest - Start 
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] Panel - GetInstallerCode - Start
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] Panel - GetInstallerCode - End
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - HandleRequest - End 
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - ProcessReceive - End
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - StartReceive - End
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - StartReceive - Start
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - After SocketReceive. 
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - ProcessReceive - Start
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - HandleRequest - Start 
+CRITICAL : 17_2_2016_13_17_25 : [00D02D3BA600] Panel - IsPassCodeValidResponse - Start
+CRITICAL : 17_2_2016_13_17_25 : [00D02D3BA600] Panel - IsPassCodeValidResponse - End
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - HandleRequest - End 
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - ProcessReceive - End
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - StartReceive - End
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - StartReceive - Start
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - After SocketReceive. 
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - ProcessReceive - Start
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - HandleRequest - Start 
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] Panel - ArmResponse - Start 
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] Panel - ArmResponse - End 
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - HandleRequest - End 
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - ProcessReceive - End
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - StartReceive - End
+TRACE : 17_2_2016_13_17_25 : [00D02D3BA600] MockPanel - StartReceive - Start
+TRACE : 17_2_2016_13_17_25 : [00D02D3ba600]PanelServices - SendArmRequest - Success
+TRACE : 17_2_2016_13_17_25 : [00D02D3ba600]PanelServices - SendArmRequest - End
+TRACE : 17_2_2016_13_17_31 : [00D02D3ba600]PanelServices - SendDisArmRequest - Start
+TRACE : 17_2_2016_13_17_31 : [00D02D3ba600]PanelServices - SendDisArmRequest - Sending
+TRACE : 17_2_2016_13_17_32 : [00D02D3BA600] MockPanel - After SocketReceive. 
+TRACE : 17_2_2016_13_17_32 : [00D02D3BA600] MockPanel - ProcessReceive - Start
+TRACE : 17_2_2016_13_17_32 : [00D02D3BA600] MockPanel - HandleRequest - Start 
+TRACE : 17_2_2016_13_17_32 : [00D02D3BA600] Panel - DisarmResponse - Start 
+TRACE : 17_2_2016_13_17_32 : [00D02D3BA600] Panel - DisarmResponse - Start 
+TRACE : 17_2_2016_13_17_32 : [00D02D3BA600] MockPanel - HandleRequest - End 
+TRACE : 17_2_2016_13_17_32 : [00D02D3BA600] MockPanel - ProcessReceive - End
+TRACE : 17_2_2016_13_17_32 : [00D02D3BA600] MockPanel - StartReceive - End
+TRACE : 17_2_2016_13_17_32 : [00D02D3BA600] MockPanel - StartReceive - Start
+TRACE : 17_2_2016_13_17_32 : [00D02D3ba600]PanelServices - SendDisArmRequest - Success
+TRACE : 17_2_2016_13_17_32 : [00D02D3ba600]PanelServices - SendDisArmRequest - End
+TRACE : 17_2_2016_13_17_38 : [00D02D3ba600]PanelServices - SendArmRequest - Start
+TRACE : 17_2_2016_13_17_38 : [00D02D3ba600]PanelServices - SendArmRequest - Sending
+TRACE : 17_2_2016_13_17_39 : [00D02D3BA600] MockPanel - After SocketReceive. 
+TRACE : 17_2_2016_13_17_39 : [00D02D3BA600] MockPanel - ProcessReceive - Start
+TRACE : 17_2_2016_13_17_39 : [00D02D3BA600] MockPanel - HandleRequest - Start 
+TRACE : 17_2_2016_13_17_39 : [00D02D3BA600] Panel - ArmResponse - Start 
+TRACE : 17_2_2016_13_17_39 : [00D02D3BA600] Panel - ArmResponse - End 
+TRACE : 17_2_2016_13_17_39 : [00D02D3BA600] MockPanel - HandleRequest - End 
+TRACE : 17_2_2016_13_17_39 : [00D02D3BA600] MockPanel - ProcessReceive - End
+TRACE : 17_2_2016_13_17_39 : [00D02D3BA600] MockPanel - StartReceive - End
+TRACE : 17_2_2016_13_17_39 : [00D02D3BA600] MockPanel - StartReceive - Start
+TRACE : 17_2_2016_13_17_39 : [00D02D3ba600]PanelServices - SendArmRequest - Success
+TRACE : 17_2_2016_13_17_39 : [00D02D3ba600]PanelServices - SendArmRequest - End

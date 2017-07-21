@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/tcWeb.TC.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="eCloudDeviceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HoneybadgerThermostat">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eCloudDeviceType" nillable="true" type="tns:eCloudDeviceType" />
+  <xs:simpleType name="eDeviceLevelType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotAvailable" />
+      <xs:enumeration value="ErrorReadingLevel" />
+      <xs:enumeration value="LevelRead" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eDeviceLevelType" nillable="true" type="tns:eDeviceLevelType" />
+  <xs:simpleType name="eArmMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Stay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Away">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eArmMode" nillable="true" type="tns:eArmMode" />
+  <xs:simpleType name="eArmType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ArmAway" />
+      <xs:enumeration value="ArmStay" />
+      <xs:enumeration value="ArmInstant" />
+      <xs:enumeration value="ArmMax" />
+      <xs:enumeration value="ArmNight" />
+      <xs:enumeration value="ArmCustom" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eArmType" nillable="true" type="tns:eArmType" />
+  <xs:simpleType name="eArmSubState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Stay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Away">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eArmSubState" nillable="true" type="tns:eArmSubState" />
+  <xs:simpleType name="eArmSubStateModifier">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Stay1">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Stay2">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eArmSubStateModifier" nillable="true" type="tns:eArmSubStateModifier" />
+  <xs:simpleType name="eZoneStatusIdentifier">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="Fault">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Trouble">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Alarm">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bypassed">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LowBattery">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eZoneStatusIdentifier" nillable="true" type="tns:eZoneStatusIdentifier" />
+  <xs:complexType name="ArrayOfePanicType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ePanicType" type="tns:ePanicType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfePanicType" nillable="true" type="tns:ArrayOfePanicType" />
+  <xs:simpleType name="ePanicType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fire" />
+      <xs:enumeration value="Medical" />
+      <xs:enumeration value="Police" />
+      <xs:enumeration value="LocalSounder" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ePanicType" nillable="true" type="tns:ePanicType" />
+</xs:schema>
